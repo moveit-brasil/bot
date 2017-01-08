@@ -1301,7 +1301,7 @@
 					return true;
 				}
 
-				var rlJoinChat = basicBot.chat.roulettejoin;
+		  var rlJoinChat = basicBot.chat.roulettejoin;
 				var rlLeaveChat = basicBot.chat.rouletteleave;
 
 				var joinedroulette = rlJoinChat.split('%%NAME%%');
@@ -1315,7 +1315,7 @@
 				if ((msg.indexOf(joinedroulette) > -1 || msg.indexOf(leftroulette) > -1) && chat.uid === basicBot.loggedInID) {
 					setTimeout(function (id) {
 						API.moderateDeleteChat(id);
-					}, 5 * 1000, chat.cid);
+					}, 12 * 1000, chat.cid);
 					return true;
 				}
 			
@@ -1333,7 +1333,7 @@
 				if ((msg.indexOf(joinedroulettetroll) > -1 || msg.indexOf(leftroulettetroll) > -1) && chat.uid === basicBot.loggedInID) {
 					setTimeout(function (id) {
 						API.moderateDeleteChat(id);
-					}, 8 * 1000, chat.cid);
+					}, 12 * 1000, chat.cid);
 					return true;
 				}
 		   
@@ -1351,7 +1351,7 @@
 				if ((msg.indexOf(joinedroulettepp) > -1 || msg.indexOf(leftroulettepp) > -1) && chat.uid === basicBot.loggedInID) {
 					setTimeout(function (id) {
 						API.moderateDeleteChat(id);
-					}, 8 * 1000, chat.cid);
+					}, 12 * 1000, chat.cid);
 					return true;
 				}
 			return false;
