@@ -3352,7 +3352,8 @@
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
 				"/me :loudspeaker: Sorteio de PP a qualquer momento fiquem atentos! :moneybag:",
 					"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
-				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php"];
+				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
+				"/me Confira todas nossas redes sociais digitando !social"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
 					 }
@@ -3523,6 +3524,22 @@
 					}
 				}
 			},
+			
+			socialCommand: {
+                             command: 'social',
+                             rank: 'user',
+                             type: 'exact',
+                             functionality: function (chat, cmd) {
+                                      if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                                      if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                                      else {						
+						API.sendChat('/me  Confira nossas redes sociais: ');
+						setTimeout(function () {
+                                                API.sendChat(subChat(basicBot.chat.social));
+						}, 1 * 1000);
+                                                }
+                                         }
+                            },
 
 			songstatsCommand: {
 				command: 'songstats',
