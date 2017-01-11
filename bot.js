@@ -412,9 +412,16 @@
 					var user = basicBot.userUtilities.lookupUser(winner);
 					var name = user.username;
 					API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
-					setTimeout(function (winner, pos) {
-						basicBot.userUtilities.moveUser(winner, pos, false);
-					}, 1 * 1000, winner, pos);
+					
+					var dj = API.getDJ();
+					if (dj && dj.id == user.id) {
+						API.sendChat(subChat(basicBot.chat.djwon, {name: name}));
+						API.moderateForceSkip();
+					} else {					
+						setTimeout(function (winner, pos) {
+							basicBot.userUtilities.moveUser(winner, pos, false);
+						}, 1 * 1000, winner, pos);
+					}
 				}
 			},
 		   roulettepp: {
