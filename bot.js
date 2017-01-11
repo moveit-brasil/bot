@@ -1979,6 +1979,12 @@
 						var name = msg.substr(cmd.length + 2);
 						var user = basicBot.userUtilities.lookupUserName(name);
 						if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
+						
+						var permFrom = basicBot.userUtilities.getPermission(chat.uid);
+						var permToban = basicBot.userUtilities.getPermission(user.id);
+						if (permFrom <= permToban)
+						return API.sendChat(subChat(basicBot.chat.banrank, {name: chat.un}));
+					
 						var permFrom = basicBot.userUtilities.getPermission(chat.uid);
 						var permUser = basicBot.userUtilities.getPermission(user.id);
 						if (permUser >= permFrom) return void(0);
