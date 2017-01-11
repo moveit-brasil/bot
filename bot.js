@@ -476,9 +476,16 @@
 					var user = basicBot.userUtilities.lookupUser(winner);
 					var name = user.username;
 					API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: posx}));
-					setTimeout(function (winner, posx) {
-						basicBot.userUtilities.moveUser(winner, posx, false);
-					}, 1 * 1000, winner, posx);
+					
+					var dj = API.getDJ();
+					if (dj && dj.id == user.id) {
+						API.sendChat(subChat(basicBot.chat.djwon, {name: name}));
+						API.moderateForceSkip();
+					} else {
+						setTimeout(function (winner, posx) {
+							basicBot.userUtilities.moveUser(winner, posx, false);
+						}, 1 * 1000, winner, posx);
+					}
 				}		
 			},
 			usersUsedThor: []
