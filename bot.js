@@ -404,12 +404,24 @@
 				},
 				endRoulette: function () {
 					basicBot.room.roulette.rouletteStatus = false;
-					var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
-					var winner = basicBot.room.roulette.participants[ind];
-					basicBot.room.roulette.participants = [];
-					/*var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);*/
+
+					var user = null;
+					var winner = null;
 					var pos = (basicBot.settings.roulettepos);
-					var user = basicBot.userUtilities.lookupUser(winner);
+
+					while (user == null && basicBot.room.roulette.participants.length > 0) {
+						var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
+						winner = basicBot.room.roulette.participants[ind];
+
+						user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
+
+						if (!user.username) {
+							user = null;
+							basicBot.room.roulette.participants.splice(ind, 1);
+						}
+					}
+					basicBot.room.roulette.participants = [];
+
 					var name = user.username;
 					API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
 					
@@ -442,11 +454,22 @@
 				},
 				endRoulette: function () {
 					basicBot.room.roulettepp.rouletteStatus = false;
-					var ind = Math.floor(Math.random() * basicBot.room.roulettepp.participants.length);
-					var winner = basicBot.room.roulettepp.participants[ind];
+					var user = null;
+					var winner = null;
+
+					while (user == null && basicBot.room.roulettepp.participants.length > 0) {
+						var ind = Math.floor(Math.random() * basicBot.room.roulettepp.participants.length);
+						winner = basicBot.room.roulettepp.participants[ind];
+
+						user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
+
+						if (!user.username) {
+							user = null;
+							basicBot.room.roulettepp.participants.splice(ind, 1);
+						}
+					}
 					basicBot.room.roulettepp.participants = [];
-					/*var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);*/
-					var user = basicBot.userUtilities.lookupUser(winner);
+
 					var name = user.username;
 					API.sendChat(subChat(basicBot.chat.winnerpickedpp, {name: name}));
 				}
@@ -469,11 +492,23 @@
 				},
 				endRoulette: function () {
 					basicBot.room.roulettetroll.rouletteStatus = false;
-					var ind = Math.floor(Math.random() * basicBot.room.roulettetroll.participants.length);
-					var winner = basicBot.room.roulettetroll.participants[ind];
-					basicBot.room.roulettetroll.participants = [];
+					var user = null;
+					var winner = null;
 					var posx = Math.floor((Math.random() * API.getWaitList().length) + 1);
-					var user = basicBot.userUtilities.lookupUser(winner);
+
+					while (user == null && basicBot.room.roulettetroll.participants.length > 0) {
+						var ind = Math.floor(Math.random() * basicBot.room.roulettetroll.participants.length);
+						winner = basicBot.room.roulettetroll.participants[ind];
+
+						user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
+
+						if (!user.username) {
+							user = null;
+							basicBot.room.roulettetroll.participants.splice(ind, 1);
+						}
+					}
+					basicBot.room.roulettetroll.participants = [];
+
 					var name = user.username;
 					API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: posx}));
 					
