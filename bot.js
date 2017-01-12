@@ -405,18 +405,17 @@
 				endRoulette: function () {
 					basicBot.room.roulette.rouletteStatus = false;
 
-					var user = null;
-					var winner = null;
+					var user = {};
+					var winner = 0;
 					var pos = (basicBot.settings.roulettepos);
 
-					while (user == null && basicBot.room.roulette.participants.length > 0) {
+					while (!user.username && basicBot.room.roulette.participants.length > 0) {
 						var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
 						winner = basicBot.room.roulette.participants[ind];
 
 						user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
 
 						if (!user.username) {
-							user = null;
 							basicBot.room.roulette.participants.splice(ind, 1);
 						}
 					}
@@ -454,17 +453,16 @@
 				},
 				endRoulette: function () {
 					basicBot.room.roulettepp.rouletteStatus = false;
-					var user = null;
-					var winner = null;
+					var user = {};
+					var winner = 0;
 
-					while (user == null && basicBot.room.roulettepp.participants.length > 0) {
+					while (!user.username && basicBot.room.roulettepp.participants.length > 0) {
 						var ind = Math.floor(Math.random() * basicBot.room.roulettepp.participants.length);
 						winner = basicBot.room.roulettepp.participants[ind];
 
 						user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
 
 						if (!user.username) {
-							user = null;
 							basicBot.room.roulettepp.participants.splice(ind, 1);
 						}
 					}
@@ -492,18 +490,17 @@
 				},
 				endRoulette: function () {
 					basicBot.room.roulettetroll.rouletteStatus = false;
-					var user = null;
-					var winner = null;
+					var user = {};
+					var winner = 0;
 					var posx = Math.floor((Math.random() * API.getWaitList().length) + 1);
 
-					while (user == null && basicBot.room.roulettetroll.participants.length > 0) {
+					while (!user.username && basicBot.room.roulettetroll.participants.length > 0) {
 						var ind = Math.floor(Math.random() * basicBot.room.roulettetroll.participants.length);
 						winner = basicBot.room.roulettetroll.participants[ind];
 
 						user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
 
 						if (!user.username) {
-							user = null;
 							basicBot.room.roulettetroll.participants.splice(ind, 1);
 						}
 					}
