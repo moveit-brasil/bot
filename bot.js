@@ -3401,7 +3401,7 @@
 				"/me :loudspeaker: Sorteio de PP a qualquer momento fiquem atentos! :moneybag:",
 				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
 				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
-			        "/me Fique por dentro da nossa festa: http://imgur.com/QIqilVJ",
+			        "/me Fique por dentro da nossa festa: http://i.imgur.com/QIqilVJ.jpg",
 				"/me Confira todas nossas redes sociais digitando !social"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
