@@ -3397,8 +3397,9 @@
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
 				"/me :loudspeaker: Sorteio de PP a qualquer momento fiquem atentos! :moneybag:",
-					"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
+				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
 				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
+			        "/me Fique por dentro da nossa festa: http://imgur.com/QIqilVJ",
 				"/me Confira todas nossas redes sociais digitando !social"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
