@@ -1,9 +1,9 @@
 /**
     Bots API by Caipira
      
-    Script para ser executado no plug, dubtrack e musiqpad sem seleÃ§Ã£o manual do site.
-    Nota: esta API apenas comunica diretamente com os sites responsÃ¡veis pelos conteÃºdos providos,
-    nÃ£o tendo direitos sobre seus conteÃºdos nem receita envolvida nesse meio.
+    Script para ser executado no plug, dubtrack e musiqpad sem seleção manual do site.
+    Nota: esta API apenas comunica diretamente com os sites responsáveis pelos conteúdos providos,
+    não tendo direitos sobre seus conteúdos nem receita envolvida nesse meio.
 */
  
 (function() {
@@ -24,9 +24,9 @@
                 if (document.location.origin.match(/plug\.dj$/))
                     return bots.consts.PLUG;
                  
-                /* O musiqpad pode ser hosteado em qualquer domÃ­nio, portanto
-                    tentaremos identificÃ¡-lo a partir de caracterÃ­sticas prÃ³prias,
-                    como a API e coisas da pÃ¡gina. */
+                /* O musiqpad pode ser hosteado em qualquer domínio, portanto
+                    tentaremos identificá-lo a partir de características próprias,
+                    como a API e coisas da página. */
                  
                 if (window.API && API.DATA && API.room && API.chat)
                     return bots.consts.MP;
@@ -130,7 +130,7 @@
         request: {
             send: function(bot,bn,obj,msg){
                 $.ajax({
-                    url : 'https://bots-caipira.rhcloud.com',
+                    url : 'https://jsutils-caipira.rhcloud.com/bots/',
                     method: 'POST',
                     data : {bot: bot, msg: msg, origin: document.location.origin}
                 })
@@ -156,16 +156,16 @@
                 bots.session.site = bots.util.detectSite();
                  
                 if (bots.session.site == -1)
-                    return alert('Site nÃ£o reconhecido!');
+                    return alert('Site não reconhecido!');
                  
                 if (bots.session.site == bots.consts.DUB)
                     bots.util.loadDubCustomAPI();
                  
                 bots.events.on();
                 setTimeout(function () {
-					 API.sendChat("Use @ss para fazer sua pergunta!")
-                 }, 2000);
-				   bots.util.sendChat('SimSimi e Ed ativados');
+			 API.sendChat("Use @ss para fazer sua pergunta!")
+                }, 2000);
+		   bots.util.sendChat('SimSimi e Ed ativados');
             }
         }
     };
