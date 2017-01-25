@@ -427,9 +427,9 @@
 					var dj = API.getDJ();
 					if (dj && dj.id == user.id) {
 						setTimeout(function () {
-						API.moderateForceSkip();
-					    }, 2 * 1000);
 						API.sendChat(subChat(basicBot.chat.djwon, {name: name}));
+					    }, 2 * 1000);
+						API.moderateForceSkip();
 					} else {						
 						setTimeout(function (winner, pos) {
 							basicBot.userUtilities.moveUser(winner, pos, false);
