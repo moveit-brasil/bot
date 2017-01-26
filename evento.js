@@ -101,7 +101,7 @@
 	var loadChat = function (cb) {
 		if (!cb) cb = function () {
 		};
-		$.get("https://dl.dropbox.com/s/wkmmamghetiff49/evento.json", function (json) {
+		$.get("https://moveit-brasil.github.io/bot/evento.json", function (json) {
 			var link = basicBot.chatLink;
 			if (json !== null && typeof json !== "undefined") {
 				langIndex = json;
@@ -242,9 +242,9 @@
 		status: false,
 		name: "Move It-Bot",
 		loggedInID: null,
-		scriptLink: "https://dl.dropbox.com/s/8wph945r18n3fns/evento.js",
+		scriptLink: "https://moveit-brasil.github.io/bot/evento.js",
 		cmdLink: "http://moveitbrasil.esy.es/comandos-do-bot.php",
-		chatLink: "https://dl.dropbox.com/s/wkmmamghetiff49/evento.json",
+		chatLink: "https://moveit-brasil.github.io/bot/evento.json",
 		chat: null,
 		loadChat: loadChat,
 		retrieveSettings: retrieveSettings,
@@ -252,8 +252,8 @@
 		settings: {
 			botName: "Move It-Bot",
 			language: "portuguese",
-			chatLink: "https://dl.dropbox.com/s/wkmmamghetiff49/evento.json",
-			scriptLink: "https://dl.dropbox.com/s/8wph945r18n3fns/evento.js",
+			chatLink: "https://moveit-brasil.github.io/bot/evento.json",
+			scriptLink: "https://moveit-brasil.github.io/bot/evento.js",
 			roomLock: false, // Requires an extension to re-load the script
 			startupCap: 1, // 1-200
 			startupVolume: 0, // 0-100
