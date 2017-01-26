@@ -1523,7 +1523,7 @@
       grabadd = ["@"+obj.user.username +"  Achou essa música uma delícia. :dlçgif:", "@"+obj.user.username +" Achou essa música :bemloco:", "@"+obj.user.username +" Adicionou está música à sua playlist. :dança:", "@"+obj.user.username +" Adicionou está música à sua playlist. :dança6:", "@"+obj.user.username +" Adicionou está música na sua playlist. :dança:", "@"+obj.user.username +" Adicionou está música à sua playlist. :dança12:", "@"+obj.user.username +" Adicionou está música à sua playlist. :dança16:" ];
       c = Math.floor(Math.random() * grabadd.length);
 	  	 var d = Math.random();
-          if (d < 0.95) return API.sendChat(grabadd[c]);
+          if (d < 0.25) return API.sendChat(grabadd[c]);
 			};
 			API.on(API.HISTORY_UPDATE, this.proxy.eventHistoryupdate);
 		},
