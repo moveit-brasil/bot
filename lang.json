@@ -209,6 +209,7 @@
     "chatfilter": "chatfilter",
     "historyskip": "historyskip",
     "lockdown": "lockdown(Chat disponível somente para staff)",
+    "lockdownhost": "lockdown host(Chat disponível somente para os hosts)",
     "lockguard": "lockguard",
     "usercommands": "comandos de usu\u00e1rio",
     "motd": "MotD",
