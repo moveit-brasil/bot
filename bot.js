@@ -59,7 +59,6 @@
 			$.getScript('https://cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js', loadSocket);
 		} else loadSocket();
 	}
-
 	var sendToSocket = function () {
 		var basicBotSettings = basicBot.settings;
 		var basicBotRoom = basicBot.room;
@@ -268,6 +267,7 @@
 			bouncerPlus: true,
 			blacklistEnabled: true,
 			lockdownEnabled: false,
+			lockdownhostEnabled: false,
 			lockGuard: false,
 			maximumLocktime: 10,
 			cycleGuard: true,
@@ -1300,6 +1300,12 @@
 						return true;
 					}
 				}
+				if (basicBot.settings.lockdownhostEnabled) {
+					if (perm < 4) {
+						API.moderateDeleteChat(chat.cid);
+						return true;
+					}
+				}
 				if (basicBot.chatcleaner(chat)) {
 					API.moderateDeleteChat(chat.cid);
 					return true;
@@ -1696,7 +1702,6 @@
 								if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 								if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
 								else{
-
 								}
 						}
 				},
@@ -2312,9 +2317,7 @@
 			},
 
 			/*
-
 			// This does not work anymore.
-
 			deletechatCommand: {
 				command: 'deletechat',
 				rank: 'mod',
@@ -2335,18 +2338,15 @@
 						for (var i = 0; i < chats.length; i++) {
 							var n = from[i].textContent;
 							if (name.trim() === n.trim()) {
-
 								// var messagecid = $(message)[i].getAttribute('data-cid');
 								// var emotecid = $(emote)[i].getAttribute('data-cid');
 								// API.moderateDeleteChat(messagecid);
-
 								// try {
 								//     API.moderateDeleteChat(messagecid);
 								// }
 								// finally {
 								//     API.moderateDeleteChat(emotecid);
 								// }
-
 								if (typeof $(message)[i].getAttribute('data-cid') == "undefined"){
 									API.moderateDeleteChat($(emote)[i].getAttribute('data-cid')); // works well with normal messages but not with emotes due to emotes and messages are seperate.
 								} else {
@@ -2358,7 +2358,6 @@
 					}
 				}
 			},
-
 			*/
 
 			deletechatCommand: {
@@ -2931,6 +2930,24 @@
 							return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.lockdown}));
 						}
 						else return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.lockdown}));
+					}
+				}
+			},
+			
+			lockdownhostCommand: {
+				command: 'lockdownhost',
+				rank: 'cohost',
+				type: 'exact',
+				functionality: function (chat, cmd) {
+					if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+					else {
+						var temp = basicBot.settings.lockdownhostEnabled;
+						basicBot.settings.lockdownhostEnabled = !temp;
+						if (basicBot.settings.lockdownhostEnabled) {
+							return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.lockdownhost}));
+						}
+						else return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.lockdownhost}));
 					}
 				}
 			},
