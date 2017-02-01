@@ -3221,7 +3221,7 @@
 						if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
 						var permFrom = basicBot.userUtilities.getPermission(chat.uid);
 						var permUser = basicBot.userUtilities.getPermission(user.id);
-						if (permUser == 0) {
+						if (permUser < 2) {
 							if (time > 45) {
 								API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
 								API.sendChat(subChat(basicBot.chat.mutedmaxtime, {name: chat.un, time: '45'}));
