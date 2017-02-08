@@ -310,7 +310,7 @@
 			welcome: true,
 			opLink: "https://rawgit.com/Shadow-Slayer/mib/master/op.json",
 			rulesLink: "http://moveitbrasil.esy.es/regras.php",
-			themeLink: "Tema: Livre (todos os gêneros permitido) Funk e Zuera somente das 22h às 07h ",
+			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h ",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
 			youtubeLink: null,
 			website: "http://moveitbrasil.esy.es/",
@@ -3410,7 +3410,7 @@
 					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
 					else {
 					   var c, mensagens;
-					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Funk e Zuera somente das 22h às 07h",
+					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h",
 				"/me Discord da sala - https://discord.gg/2z6RHyj",
 				"/me Whatsapp da sala - https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: ",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",
