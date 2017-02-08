@@ -513,7 +513,9 @@
 					
 					var dj = API.getDJ();
 					if (dj && dj.id == user.id) {
+						setTimeout(function () {
 						API.sendChat(subChat(basicBot.chat.djwon, {name: name}));
+					    }, 2 * 1000);
 						API.moderateForceSkip();
 					} else {
 						setTimeout(function (winner, posx) {
