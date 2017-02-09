@@ -3417,7 +3417,6 @@
 				"/me Whatsapp da sala - https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: ",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
-				"/me :loudspeaker: Sorteio de PP a qualquer momento fiquem atentos! :moneybag:",
 				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
 				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
 				"/me Confira todas nossas redes sociais digitando !social"];
