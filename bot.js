@@ -3600,10 +3600,7 @@
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                       else {						
-						API.sendChat('/me  Confira nossas redes sociais: ');
-						setTimeout(function () {
-                                                API.sendChat(subChat(basicBot.chat.social));
-						}, 1 * 1000);
+		  API.sendChat('/me Facebook https://www.fb.com/groups/MoveItBrasil :white_check_mark: Discord https://discord.gg/2z6RHyj :white_check_mark:  Whatsapp https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: Skype https://join.skype.com/DmM8AGbkzak8 :white_check_mark:');
                                                 }
                                          }
                             },
