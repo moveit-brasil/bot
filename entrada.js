@@ -10,4 +10,7 @@ API.on(API.USER_JOIN, user => {
 
 	if (user.id == "6511093")
 		API.sendChat(`/me A mulher do xado @${user.username} acaba de entrar na sala.`);
+
+	if (user.id == "18951868")
+		API.sendChat(`/me Quem for diabético saia, porque o docinho @${user.username} chegou :revolving_hearts:.`);
 });
