@@ -3600,7 +3600,7 @@
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                       else {						
-			API.sendChat('/me Skype: https://join.skype.com/DmM8AGbkzak8 ✅ Discord: https://discord.gg/2z6RHyj ✅ Facebook: https://www.fb.com/groups/MoveItBrasil ✅ Whatsapp: https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp ✅');
+			API.sendChat('/me Discord: https://discord.gg/2z6RHyj ✅ Facebook: https://www.fb.com/groups/MoveItBrasil ✅ Whatsapp: https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp ✅');
                                          }
 			            }
                             },
