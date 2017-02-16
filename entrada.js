@@ -13,4 +13,7 @@ API.on(API.USER_JOIN, user => {
 
 	if (user.id == "18951868")
 		API.sendChat(`/me Quem for diabético saia, porque o docinho @${user.username} chegou :revolving_hearts:.`);
+	
+	if (user.id == "5765109")
+		API.sendChat(`/me O mais fofo da sala @${user.username} acaba de entrar :crown:`);
 });
