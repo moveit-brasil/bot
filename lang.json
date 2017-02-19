@@ -190,7 +190,7 @@
     "nolimitspecified": "\/me [@%%NAME%%] Limite n\u00e3o especificado.",
     "invalidlimitspecified": "\/me [@%%NAME%%] Limite inv\u00e1lido.",
     "invalidpositionspecified": "\/me [@%%NAME%%] Posi\u00e7\u00e3o inv\u00e1lida.",
-    "whois": "\/me [%%NAME1%%] Usu\u00e1rio: %%NAME2%%, ID: %%ID%%, Rank: %%RANK%%, Registro: %%JOINED%%, N\u00edvel: %%LEVEL%%, Linguagem: %%LANGUAGE%%, Avatar: %%AVATAR%%, Status: %%STATUS%, Perfil: %%%PROFILE%%",
+    "whois": "\/me [%%NAME1%%] Usu\u00e1rio: %%NAME2%%, ID: %%ID%%, Rank: %%RANK%%, Registro: %%JOINED%%, N\u00edvel: %%LEVEL%%, Linguagem: %%LANGUAGE%%, Avatar: %%AVATAR%%, Status: %%STATUS%%, PPs: %%PP%% Perfil: %%PROFILE%%",
     "toggleon": "\/me [@%%NAME%%] %%FUNCTION%% ativado.",
     "toggleoff": "\/me [@%%NAME%%] %%FUNCTION%% desativado.",
     "cmddeletion": "remo\u00e7\u00e3o de comandos",
