@@ -4253,6 +4253,7 @@
 								var avatar = API.getUser(id).avatarID;
 								var level = API.getUser(id).level;
 								var pp = API.getUser(id).pp;
+								var status = API.getUser(id).status;
 								var rawjoined = API.getUser(id).joined;
 								var joined = rawjoined.substr(0, 10);
 								var rawlang = API.getUser(id).language;
