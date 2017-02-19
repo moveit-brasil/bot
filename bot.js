@@ -4252,6 +4252,7 @@
 								var id = users[i].id;
 								var avatar = API.getUser(id).avatarID;
 								var level = API.getUser(id).level;
+								var pp = API.getUser(id).pp;
 								var rawjoined = API.getUser(id).joined;
 								var joined = rawjoined.substr(0, 10);
 								var rawlang = API.getUser(id).language;
@@ -4304,7 +4305,7 @@
 									profile = "~";
 								}
 
-								API.sendChat(subChat(basicBot.chat.whois, {name1: chat.un, name2: name, id: id, avatar: avatar, profile: profile, language: language, level: level, joined: joined, rank: rank}));
+								API.sendChat(subChat(basicBot.chat.whois, {name1: chat.un, name2: name, id: id, avatar: avatar, profile: profile, language: language, level: level, pp: pp, joined: joined, rank: rank}));
 							}
 						}
 					}
