@@ -20,8 +20,3 @@ API.on(API.USER_JOIN, user => {
 	if (user.id == "6100629")
 		API.sendChat(`/me Cuidado com a caçadora de cobras assexuadas @${user.username} acaba de entrar na sala. :heart:`);
 });
-
-
-
-
- ""
