@@ -3420,6 +3420,7 @@
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
 				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
 				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
+				"/me Quer ter uma foto no chat? http://i.imgur.com/Q8OTszL.jpg Digite !foto entre no nosso grupo e siga as instruções!", 
 				"/me Confira todas nossas redes sociais digitando !social"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
