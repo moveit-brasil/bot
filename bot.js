@@ -3604,6 +3604,19 @@
                                          }
 			            }
                             },
+			
+			fotoCommand: {
+                             command: 'foto',
+                             rank: 'user',
+                             type: 'exact',
+                             functionality: function (chat, cmd) {
+                                      if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                                      if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                                      else {						
+			API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://www.facebook.com/groups/MoveItBrasil/permalink/1174959805881670/');
+                                         }
+			            }
+                            },
 
 			songstatsCommand: {
 				command: 'songstats',
