@@ -310,7 +310,7 @@
 			welcome: true,
 			opLink: "https://rawgit.com/Shadow-Slayer/mib/master/op.json",
 			rulesLink: "http://moveitbrasil.esy.es/regras.php",
-			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h ",
+			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos +18 são proibidos :underage:",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
 			youtubeLink: null,
 			website: "http://moveitbrasil.esy.es/",
