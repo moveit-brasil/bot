@@ -163,7 +163,7 @@
                  
                 bots.events.on();
                 setTimeout(function () {
-			 API.sendChat("Use @ss para fazer sua pergunta!")
+			 API.sendChat("Use @ss e @ed para fazer sua pergunta!")
                 }, 2000);
 		   bots.util.sendChat('SimSimi e Ed ativados');
             }
