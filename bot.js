@@ -308,7 +308,7 @@
 			filterChat: false,
 			etaRestriction: false,
 			welcome: true,
-			opLink: "https://rawgit.com/Shadow-Slayer/mib/master/op.json",
+			opLink: "https://moveit-brasil.github.io/bot/op.json",
 			rulesLink: "http://moveitbrasil.esy.es/regras.php",
 			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
@@ -319,9 +319,9 @@
 			songstats: false,
 			commandLiteral: "!",
 			blacklists: {
-				NSFW: "https://rawgit.com/Shadow-Slayer/master/blacklists/NSFW.json",
-				OP: "https://rawgit.com/Shadow-Slayer/mib/master/op.json",
-				BANNED: "https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json"
+				NSFW: "#",
+				OP: "https://moveit-brasil.github.io/bot/op.json",
+				BANNED: "#"
 			}
 		},
 		room: {
