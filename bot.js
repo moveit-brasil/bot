@@ -3414,7 +3414,7 @@
 					   var c, mensagens;
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 				"/me Discord da sala - https://discord.me/move-it",
-				"http://i.imgur.com/jx35Roc.gif",
+				"http://i.imgur.com/M2y1h4R.jpg",
 				"/me Whatsapp da sala - https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: ",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
