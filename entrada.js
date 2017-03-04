@@ -12,7 +12,7 @@ API.on(API.USER_JOIN, user => {
 		API.sendChat(`/me A mulher do xado @${user.username} acaba de entrar na sala.`);
 
 	if (user.id == "18951868")
-		API.sendChat(`/me Quem tiver rola grande, passa no meu braço @${user.username} gostei :yum: `);
+		API.sendChat(`/me Quem for diabético saia, porque o docinho @${user.username} chegou :yum: `);
 	
 	if (user.id == "5765109")
 		API.sendChat(`/me O mais fofo da sala @${user.username} acaba de entrar. :crown:`);
