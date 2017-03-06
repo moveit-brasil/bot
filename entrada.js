@@ -9,11 +9,14 @@ API.on(API.USER_JOIN, user => {
 		API.sendChat(`/me Preparem-se, o martelo do BAN  @${user.username} acabou de entrar!.`);
 
 	if (user.id == "6511093")
-		API.sendChat(`/me A mulher do xado @${user.username} acaba de entrar na sala.`);
+		API.sendChat(`/me A mulher do xado @${user.username} acaba de entrar na sala. 🦉`);
 
 	if (user.id == "18951868")
 		API.sendChat(`/me Quem for diabético saia, porque o docinho @${user.username} chegou :yum: `);
 	
 	if (user.id == "5765109")
-		API.sendChat(`/me O mais fofo da sala @${user.username} acaba de entrar. :crown:`);
+		API.sendChat(`/me O mais fofo da sala @${user.username} acaba de entrar. :crown:`); 
+	
+	if (user.id == "3851265")
+		API.sendChat(`/me @${user.username} "O IMPERDOÁVEL" acaba de entrar. :eggplant: `);
 });
