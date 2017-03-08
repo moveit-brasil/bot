@@ -310,7 +310,7 @@
 			welcome: true,
 			opLink: "https://moveit-brasil.github.io/bot/op.json",
 			rulesLink: "http://moveitbrasil.esy.es/regras.php",
-			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
+			themeLink: "Tema: Livre (todos os gêneros permitido) Só com artistas femininas :nail_care: Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
 			youtubeLink: null,
 			website: "http://moveitbrasil.esy.es/",
