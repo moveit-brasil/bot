@@ -3413,15 +3413,11 @@
 					else {
 					   var c, mensagens;
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Só com artistas femininas :nail_care: Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
-				"/me Discord da sala - https://discord.me/move-it",
 				"/me A Move It deseja a todas as mulheres um :hibiscus: Feliz Dia Da Mulher :hibiscus: http://i.imgur.com/uMKO0Vv.gif",		       
 				"/me :popcorn: Cine Move It :film_projector:, sábado às 22h, escolham o filme em https://www.fb.com/groups/MoveItBrasil/permalink/1403374723040176/",
-				"/me Whatsapp da sala - https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: ",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
 				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
-				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
-				"/me Quer ter uma foto no chat? http://i.imgur.com/Q8OTszL.jpg Digite !foto entre no nosso grupo e siga as instruções!", 
 				"/me Confira todas nossas redes sociais digitando !social"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
