@@ -2890,7 +2890,7 @@
 						var dj = API.getDJ().id;
 						var isDj = false;
 						if (dj === chat.uid) isDj = true;
-						if (perm >= 1 || isDj) {
+						if (perm >= 0 || isDj) {
 							if (media.format === 1) {
 								var linkToSong = "https://youtu.be/" + media.cid;
 								API.sendChat(subChat(basicBot.chat.songlink, {name: from, link: linkToSong}));
