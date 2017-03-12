@@ -3413,9 +3413,7 @@
 					else {
 					   var c, mensagens;
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
-				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",  					       
-				"/me :popcorn: Cine Move It :film_projector:, sábado às 22h, escolham o filme em https://www.fb.com/groups/MoveItBrasil/permalink/1403374723040176/",
-				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
+				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
 				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot.php",
 				"/me Quer ter uma foto no chat? http://i.imgur.com/Q8OTszL.jpg Digite !foto entre no nosso grupo e siga as instruções!",
 				"/me Whatsapp da sala - https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: ",
