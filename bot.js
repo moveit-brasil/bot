@@ -242,7 +242,7 @@
 		name: "Move It-Bot",
 		loggedInID: null,
 		scriptLink: "https://moveit-brasil.github.io/bot/bot.js",
-		cmdLink: "http://moveitbrasil.esy.es/comandos-do-bot",
+		cmdLink: "http://moveitbrasil.com.br/comandos-do-bot",
 		chatLink: "https://moveit-brasil.github.io/bot/lang.json",
 		chat: null,
 		loadChat: loadChat,
@@ -309,11 +309,11 @@
 			etaRestriction: false,
 			welcome: true,
 			opLink: "https://moveit-brasil.github.io/bot/op.json",
-			rulesLink: "http://moveitbrasil.esy.es/regras",
+			rulesLink: "http://moveitbrasil.com.br/regras",
 			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
 			youtubeLink: null,
-			website: "http://moveitbrasil.esy.es/",
+			website: "http://moveitbrasil.com.br/",
 			intervalMessages: [],
 			messageInterval: 2,
 			songstats: false,
@@ -2411,7 +2411,7 @@
 					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
 					else {
 						var link = 'http://www.emoji-cheat-sheet.com/';
-						var link2 = 'http://moveitbrasil.esy.es/emotes.php';
+						var link2 = 'http://moveitbrasil.com.br/emotes.php';
 						API.sendChat(subChat(basicBot.chat.emojilist));
 					}
 				}
@@ -2438,11 +2438,11 @@
 							case 'es': ch += 'Por favor, hable Inglés.'; break;
 							case 'fr': ch += 'Parlez anglais, s\'il vous plaît.'; break;
 							case 'nl': ch += 'Spreek Engels, alstublieft.'; break;
-							case 'pl': ch += 'Proszę mówić po angielsku.'; break;
+							case 'pl': ch += 'Prosze mówic po angielsku.'; break;
 							case 'pt': ch += 'Por favor, fale Inglês.'; break;
 							case 'sk': ch += 'Hovorte po anglicky, prosím.'; break;
 							case 'cs': ch += 'Mluvte prosím anglicky.'; break;
-							case 'sr': ch += 'Молим Вас, говорите енглески.'; break;
+							case 'sr': ch += '????? ???, ???????? ????????.'; break;
 						}
 						ch += ' English please.';
 						API.sendChat(ch);
@@ -3429,7 +3429,7 @@
 					   var c, mensagens;
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
-				"/me Comandos do bot http://moveitbrasil.esy.es/comandos-do-bot",
+				"/me Comandos do bot http://moveitbrasil.com.br/comandos-do-bot",
 				"/me Quer ter uma foto no chat? http://i.imgur.com/Q8OTszL.jpg Digite !foto entre no nosso grupo e siga as instruções!",
 				"/me Whatsapp da sala - https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp :white_check_mark: ",
 				"/me Participe do Grupo no Facebook https://www.fb.com/groups/MoveItBrasil",
@@ -3614,7 +3614,7 @@
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                       else {						
-			API.sendChat('/me Discord: https://discord.me/move-it ✅ Facebook: https://www.fb.com/groups/MoveItBrasil ✅ Whatsapp: https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp ✅');
+			API.sendChat('/me Discord: https://discord.me/move-it ? Facebook: https://www.fb.com/groups/MoveItBrasil ? Whatsapp: https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp ?');
                                          }
 			            }
                             },
