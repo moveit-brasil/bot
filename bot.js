@@ -320,7 +320,7 @@
 			commandLiteral: "!",
 			blacklists: {
 				NSFW: "#",
-				OP: "https://moveit-brasil.github.io/bot/op.json",
+				OP: "https://moveitbrasil.com.br/blacklist-op-json/",
 				BANNED: "#"
 			}
 		},
