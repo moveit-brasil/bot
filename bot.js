@@ -3612,7 +3612,7 @@
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                       else {						
-			API.sendChat('/me Discord: https://discord.me/move-it ? Facebook: https://www.fb.com/groups/MoveItBrasil ? Whatsapp: https://chat.whatsapp.com/6EyjDJAeZhX7WDyUqBonlp ?');
+			API.sendChat('/me Discord: https://discord.me/move-it ? Facebook: https://www.fb.com/groups/MoveItBrasil ?');
                                          }
 			            }
                             },
