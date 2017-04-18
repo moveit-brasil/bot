@@ -3625,7 +3625,7 @@
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                       else {						
-			API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://moveitbrasil.com.br/foto-no-chat-do-plug//');
+			API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://moveitbrasil.com.br/foto-no-chat-do-plug/');
                                          }
 			            }
                             },
