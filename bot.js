@@ -3430,6 +3430,7 @@
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
 				"/me Comandos do bot https://moveitbrasil.com.br/comandos-do-bot",
+				"/me Compre o Sub do Plug por boleto em https://moveitbrasil.com.br/loja/",
 				"/me Confira nossas regras em Regras - https://moveitbrasil.com.br/regras/",
 				"/me Quer ter uma foto no chat? http://i.imgur.com/Q8OTszL.jpg Digite !foto cadastre-se em nosso site e siga as instruções!",				
 				"/me Confira todas nossas redes sociais digitando !social"];
