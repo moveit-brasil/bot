@@ -16,4 +16,7 @@ API.on(API.USER_JOIN, user => {
 	
 	if (user.id == "3851265")
 		API.sendChat(`/me @${user.username} "O IMPERDOÁVEL" acaba de entrar. :eggplant: `);
+	
+	if (user.id == "22910219")
+		API.sendChat(`/me @${user.username} A anjinha da sala @Chkis acaba de entrar 👼 `);
 });
