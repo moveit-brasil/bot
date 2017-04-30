@@ -1724,7 +1724,7 @@
 
 						var launchT = basicBot.room.roomstats.launchTime;
 						var durationOnline = Date.now() - launchT;
-						var since = durationOnline / 1000;
+						var since = basicBot.roomUtilities.msToStr(durationOnline);
 
 						if (msg.length === cmd.length) time = since;
 						else {
