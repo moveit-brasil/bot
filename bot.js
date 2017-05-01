@@ -1714,33 +1714,33 @@
 				rank: 'bouncer',
 				type: 'startsWith',
 				functionality: function (chat, cmd) {
-					if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+				    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+				    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+				    else {
+					var msg = chat.message;
+					var now = Date.now();
+					var chatters = 0;
+					var time;
+
+					var launchT = basicBot.room.roomstats.launchTime;
+					var durationOnline = Date.now() - launchT;
+					var since = durationOnline / 1000;
+
+					if (msg.length === cmd.length) time = since;
 					else {
-						var msg = chat.message;
-						var now = Date.now();
-						var chatters = 0;
-						var time;
-
-						var launchT = basicBot.room.roomstats.launchTime;
-						var durationOnline = Date.now() - launchT;
-						var since = basicBot.roomUtilities.msToStr(durationOnline);
-
-						if (msg.length === cmd.length) time = since;
-						else {
-							time = msg.substring(cmd.length + 1);
-							if (isNaN(time)) return API.sendChat(subChat(basicBot.chat.invalidtime, {name: chat.un}));
-						}
-						for (var i = 0; i < basicBot.room.users.length; i++) {
-							userTime = basicBot.userUtilities.getLastActivity(basicBot.room.users[i]);
-							if ((now - userTime) <= (time * 60 * 1000)) {
-								chatters++;
-							}
-						}
-						API.sendChat(subChat(basicBot.chat.activeusersintime, {name: chat.un, amount: chatters, time: time}));
+					    time = msg.substring(cmd.length + 1);
+					    if (isNaN(time)) return API.sendChat(subChat(basicBot.chat.invalidtime, {name: chat.un}));
 					}
+					for (var i = 0; i < basicBot.room.users.length; i++) {
+					    userTime = basicBot.userUtilities.getLastActivity(basicBot.room.users[i]);
+					    if ((now - userTime) <= (time * 60 * 1000)) {
+						chatters++;
+					    }
+					}
+					API.sendChat(subChat(basicBot.chat.activeusersintime, {name: chat.un, amount: chatters, time: time}));
+				    }
 				}
-			},
+			    },
 
 			addCommand: {
 				command: 'add',
