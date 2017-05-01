@@ -1721,8 +1721,6 @@
 					var now = Date.now();
 					var chatters = 0;
 					var time;
-					var tempo = basicBot.roomUtilities.msToStr(durationOnline);
-
 
 					var launchT = basicBot.room.roomstats.launchTime;
 					var durationOnline = Date.now() - launchT;
@@ -1739,7 +1737,7 @@
 						chatters++;
 					    }
 					}
-					API.sendChat(subChat(basicBot.chat.activeusersintime, {name: chat.un, amount: chatters, time: tempo}));
+					API.sendChat(subChat(basicBot.chat.activeusersintime, {name: chat.un, amount: chatters, time: durationOnline}));
 				    }
 				}
 			    },
