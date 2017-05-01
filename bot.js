@@ -1721,7 +1721,8 @@
 					var now = Date.now();
 					var chatters = 0;
 					var time;
-					var timeString = basicBot.roomUtilities.msToStr(time);
+					var time2 = Date.now() - join;
+					var timeString = basicBot.roomUtilities.msToStr(time2);
 
 					var launchT = basicBot.room.roomstats.launchTime;
 					var durationOnline = Date.now() - launchT;
