@@ -2009,7 +2009,7 @@
 					else {
 							var name = chat.message.substring(cmd.length + 2);
 							var msg = chat.message;
-							API.sendChat('/me @' + name + ', avoid giving too many "mehs" in the songs, use the mute button too. If you persist, you may be punished.'); 
+							API.sendChat('/me @' + name + ', avoid giving too many "meh", we usually just mute the songs. If you give too many "meh" you can be banned.'); 
 					 }
 				}
 			},
@@ -2024,7 +2024,7 @@
 					else {
 							var name = chat.message.substring(cmd.length + 2);
 							var msg = chat.message;
-							API.sendChat('/me @' + name + ', evite dar muitos "chatos" seguidos nas músicas, utilize também o botão de silenciar. Caso persista, você poderá ser punido.'); 
+							API.sendChat('/me @' + name + ', evite dar muitos "chatos", nós costumamos apenas silenciar as músicas. Caso dê muitos chatos você poderá ser banido.'); 
 					 }
 				}
 			},
