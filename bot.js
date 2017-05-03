@@ -1329,15 +1329,7 @@
 					API.moderateDeleteChat(chat.cid);
 					API.sendChat(subChat(basicBot.chat.adfly, {name: chat.un}));
 					return true;
-				}
-		if (msg.indexOf(':shadowslayer:') > -1) {
-					API.moderateDeleteChat(chat.cid);                    
-					return true;
-				}
-		if (msg.indexOf('http://image.prntscr.com/image/b052ff76400e4fec8f7d9798053858db.png') > -1) {
-					API.moderateDeleteChat(chat.cid);                    
-					return true;
-				}		    
+				}			    
 				if (msg.indexOf('ganhou a posição 4') > -1) {
 					setTimeout(function () {
 						API.sendChat(subChat(basicBot.chat.pos4));
@@ -1347,6 +1339,9 @@
 				if (msg.indexOf('!thor') > -1) {
 					API.moderateDeleteChat(chat.cid);
 					API.sendChat('Não temos thor, temos !jailson :dlç:');
+					setTimeout(function (id) {
+						API.moderateDeleteChat(id);
+					}, 2 * 1000, chat.cid);
 				}
 				if (msg.indexOf('!clearchat') > -1) {
 					API.sendChat('/clear');
