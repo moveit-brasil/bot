@@ -808,11 +808,7 @@
 								var warncount = user.afkWarningCount;
 								if (inactivity > basicBot.settings.maximumAfk * 60 * 1000) {
 									if (warncount === 0) {
-										API.sendChat(subChat(basicBot.chat.warning1, {name: name, time: time}));
-										setTimeout(function (id) {
-											API.moderateDeleteChat(id);
-										}, 2 * 1000, chat.cid);					
-										return true;
+										API.sendChat(subChat(basicBot.chat.warning1, {name: name, time: time}));										
 										user.afkWarningCount = 3;
 										user.afkCountdown = setTimeout(function (userToChange) {
 											userToChange.afkWarningCount = 1;
