@@ -1348,6 +1348,12 @@
 					API.moderateDeleteChat(chat.cid);
 					return true;
 				}
+				if (msg.indexOf('Você esteve inativo por') > 0 || msg.indexOf('removido da fila de espera') > 0) {
+					setTimeout(function () {
+						API.moderateDeleteChat(chat.cid);
+					}, 120 * 1000);
+					return true;
+				}
 
 		  var rlJoinChat = basicBot.chat.roulettejoin;
 				var rlLeaveChat = basicBot.chat.rouletteleave;
