@@ -1348,10 +1348,16 @@
 					API.moderateDeleteChat(chat.cid);
 					return true;
 				}
-				if (msg.indexOf('Você esteve inativo por') > 0 || msg.indexOf('removido da fila de espera') > 0 || msg.indexOf('você não é dlç o bastante para provar do suco') > 0 || msg.indexOf('sente-se, relaxe e toca uma pra mim') > 0) {
+				if (msg.indexOf('Você esteve inativo por') > 0 || msg.indexOf('removido da fila de espera') > 0) {
 					setTimeout(function () {
 						API.moderateDeleteChat(chat.cid);
 					}, 120 * 1000);
+					return true; 
+				}
+				if (msg.indexOf('você não é dlç o bastante para provar do suco') > 0 || msg.indexOf('sente-se, relaxe e toca uma pra mim') > 0 || msg.indexOf('[AFK]') > 0 ) {
+					setTimeout(function () {
+						API.moderateDeleteChat(chat.cid);
+					}, 5 * 1000);
 					return true;
 				}
 
