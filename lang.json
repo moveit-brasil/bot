@@ -221,7 +221,7 @@
     "voteskipexceededlimit": "\/me @%%NAME%%, sua m\u00fasica excedeu o limite de %%LIMIT%% chatos.",
     "voteskipinvalidlimit": "\/me [@%%NAME%%] Limite de voteskip inv\u00e1lido, por favor, tente novamente usando um n\u00famero v\u00e1lido para indicar o n\u00famero de de chatos.",
     "voteskipsetlimit": "\/me [@%%NAME%%] Limite de voteskip definido para %%LIMIT%%.",
-    "activeusersintime": "\/me [@%%NAME%%] %%AMOUNT%% usu\u00e1rios estiveram ativos nos \u00faltimos %%TIME%%.",
+    "activeusersintime": "\/me [@%%NAME%%] %%AMOUNT%% usu\u00e1rios estiveram ativos nos \u00faltimos %%TIME%% minutos.",
     "maximumafktimeset": "\/me [@%%NAME%%] Dura\u00e7\u00e3o m\u00e1xima de AFK agora \u00e9: %%TIME%% minutos.",
     "afkstatusreset": "\/me [@%%NAME%%] Status AFK resetado: @%%USERNAME%%.",
     "inactivefor": "\/me [@%%NAME%%] @%%USERNAME%% esteve inativo por %%TIME%%.",
