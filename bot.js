@@ -1718,8 +1718,7 @@
 					var msg = chat.message;
 					var now = Date.now();
 					var chatters = 0;
-					var time;
-					var time2 = time / 60;
+					var time;					
 
 					var launchT = basicBot.room.roomstats.launchTime;
 					var durationOnline = Date.now() - launchT;
@@ -1733,11 +1732,12 @@
 					}
 					for (var i = 0; i < basicBot.room.users.length; i++) {
 					    userTime = basicBot.userUtilities.getLastActivity(basicBot.room.users[i]);
+					    var tempo = time / 60;
 					    if ((now - userTime) <= (time * 60 * 1000)) {
 						chatters++;
 					    }
 					}
-					API.sendChat(subChat(basicBot.chat.activeusersintime, {name: chat.un, amount: chatters, time: time2}));
+					API.sendChat(subChat(basicBot.chat.activeusersintime, {name: chat.un, amount: chatters, time: tempo}));
 				    }
 				}
 			    },
