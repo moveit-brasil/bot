@@ -1354,7 +1354,7 @@
 					}, 120 * 1000);
 					return true; 
 				}
-				if (msg.indexOf('você não é dlç o bastante para provar do suco') > 0 || msg.indexOf('sente-se, relaxe e toca uma pra mim') > 0 || msg.indexOf('[AFK]') > 0 ) {
+				if (msg.indexOf('você não é dlç o bastante para provar do suco') > 0 || msg.indexOf(' [AFK] ') > 0 ) {
 					setTimeout(function () {
 						API.moderateDeleteChat(chat.cid);
 					}, 5 * 1000);
