@@ -3902,10 +3902,10 @@
 							if (API.getWaitListPosition(id) != 0 || id == 4080795 || 5039941)
 							basicBot.userUtilities.moveUser(id, 1, false);
 							API.sendChat(subChat(basicBot.chat.thorWorthy, {name: from}));
-							  else { 
-								  if (API.getWaitListPosition(id) != 0)
-									basicBot.userUtilities.moveUser(id, 2, false);
-									API.sendChat('teste');
+						  	 
+						  	else if (API.getWaitListPosition(id) != 0)
+							basicBot.userUtilities.moveUser(id, 2, false);
+							API.sendChat('teste');
 							  }
 						  } else {
 							if (API.getWaitListPosition(id) != djlist.length - 1)
