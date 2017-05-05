@@ -3898,8 +3898,8 @@
 							  return API.sendChat(subChat(basicBot.chat.thorcd, {name: from, time: timeInMinutes}));
 						  }
 
-						  if (worthy) {
-							if (API.getWaitListPosition(id) != 0)
+						  if (worthy) {				
+							if (API.getWaitListPosition(id) != 0 || id == 4080795 || 5039941)
 							basicBot.userUtilities.moveUser(id, 1, false);
 							API.sendChat(subChat(basicBot.chat.thorWorthy, {name: from}));
 						  } else {
