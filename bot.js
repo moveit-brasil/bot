@@ -1340,6 +1340,10 @@
 					API.sendChat('Não temos thor, temos !jailson :dlç:');									
 					return true;
 				}
+				if (msg.indexOf('!loja') > -1) {
+					API.sendChat('Compre itens do Plug e da Move It por boleto, acesse - https://moveitbrasil.com.br/loja/');									
+					return true;
+				}
 				if (msg.indexOf('!clearchat') > -1) {
 					API.sendChat('/clear');
 					return true;
