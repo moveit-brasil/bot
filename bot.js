@@ -1341,7 +1341,7 @@
 					return true;
 				}
 				if (msg.indexOf('!loja') > -1) {
-					API.sendChat('Compre itens do Plug e da Move It por boleto, acesse - https://moveitbrasil.com.br/loja/');									
+					API.sendChat('Compre itens VIP Move It por boleto, acesse - https://moveitbrasil.com.br/loja/');									
 					return true;
 				}
 				if (msg.indexOf('!clearchat') > -1) {
@@ -3439,8 +3439,7 @@
 					   var c, mensagens;
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				"/me Digite !autowoot e instale o RCS para poder ver a costumização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",
-				"/me Comandos do bot https://moveitbrasil.com.br/comandos-do-bot",
-				"/me http://i.imgur.com/8OdUbcP.jpg Acesse https://moveitbrasil.com.br/loja/",
+				"/me Comandos do bot https://moveitbrasil.com.br/comandos-do-bot",				
 				"/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
 				"/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!",				
 				"/me Confira todas nossas redes sociais digitando !social"];
