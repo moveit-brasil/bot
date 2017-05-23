@@ -130,7 +130,7 @@
         request: {
             send: function(bot,bn,obj,msg){
                 $.ajax({
-                    url : 'https://bots-caipira.rhcloud.com/bots/',
+                    url : 'https://bots-caipira.rhcloud.com/',
                     method: 'POST',
                     data : {bot: bot, msg: msg, origin: document.location.origin}
                 })
