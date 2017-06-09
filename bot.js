@@ -3442,7 +3442,7 @@
 				"/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",								
 				"/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
 				"/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!",
-				"/me Evento do Dia Dos Namorados, dia 12 às 15h http://i.imgur.com/cVftWsg.jpg"];
+				"/me Evento do Dia Dos Namorados, dia 12 às 15h http://i.imgur.com/wpNzl4C.png"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
 					 }
