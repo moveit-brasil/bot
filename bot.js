@@ -1341,7 +1341,7 @@
 					return true;
 				}
 			
-		var rlJoinChattroll = basicBot.chat.rouletteentrar;
+		var rlJoinChattroll = basicBot.chat.rouletteentra;
 				var rlLeaveChattroll = basicBot.chat.roulettesair;
 
 				var joinedroulettetroll = rlJoinChattroll.split('%%NAME%%');
@@ -1359,7 +1359,7 @@
 					return true;
 				}
 		   
-		var rlJoinChatpp = basicBot.chat.rouletteppentrar;
+		var rlJoinChatpp = basicBot.chat.rouletteppentra;
 				var rlLeaveChatpp = basicBot.chat.rouletteppsair;
 
 				var joinedroulettepp = rlJoinChatpp.split('%%NAME%%');
@@ -2784,7 +2784,7 @@
 				}
 			},
 			
-			entrarCommand: {
+			entraCommand: {
 				command: 'entrar',
 				rank: 'user',
 				type: 'exact',
@@ -2794,7 +2794,7 @@
 					else {
 						if (basicBot.room.roulettetroll.rouletteStatus && basicBot.room.roulettetroll.participants.indexOf(chat.uid) < 0) {
 							basicBot.room.roulettetroll.participants.push(chat.uid);
-							API.sendChat(subChat(basicBot.chat.rouletteentrar, {name: chat.un}));
+							API.sendChat(subChat(basicBot.chat.rouletteentra, {name: chat.un}));
 					setTimeout(function () {
 							 var msg = chat.message;
 							 var dj = API.getDJ().username;
@@ -2836,7 +2836,7 @@
 					else {
 						if (basicBot.room.roulettepp.rouletteStatus && basicBot.room.roulettepp.participants.indexOf(chat.uid) < 0) {
 							basicBot.room.roulettepp.participants.push(chat.uid);
-							API.sendChat(subChat(basicBot.chat.rouletteppentrar, {name: chat.un}));
+							API.sendChat(subChat(basicBot.chat.rouletteppentra, {name: chat.un}));
 						}
 					}
 				}
