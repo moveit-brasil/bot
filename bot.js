@@ -7,11 +7,6 @@
 
 (function () {
 
-	/*window.onerror = function() {
-		var room = JSON.parse(localStorage.getItem("basicBotRoom"));
-		window.location = 'https://plug.dj' + room.name;
-	};*/
-
 	API.getWaitListPosition = function(id){
 		if(typeof id === 'undefined' || id === null){
 			id = API.getUser().id;
@@ -33,43 +28,6 @@
 		basicBot.status = false;
 	};
 
-	// This socket server is used solely for statistical and troubleshooting purposes.
-	// This server may not always be up, but will be used to get live data at any given time.
-
-	/*var socket = function () {
-		function loadSocket() {
-			SockJS.prototype.msg = function(a){this.send(JSON.stringify(a))};
-			sock = new SockJS('https://benzi.io:4964/socket');
-			sock.onopen = function() {
-				console.log('Connected to socket!');
-				sendToSocket();
-			};
-			sock.onclose = function() {
-				console.log('Disconnected from socket, reconnecting every minute ..');
-				var reconnect = setTimeout(function(){ loadSocket() }, 60 * 1000);
-			};
-			sock.onmessage = function(broadcast) {
-				var rawBroadcast = broadcast.data;
-				var broadcastMessage = rawBroadcast.replace(/["\\]+/g, '');
-				API.chatLog(broadcastMessage);
-				console.log(broadcastMessage);
-			};
-		}
-		if (typeof SockJS == 'undefined') {
-			$.getScript('https://cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js', loadSocket);
-		} else loadSocket();
-	}
-	var sendToSocket = function () {
-		var basicBotSettings = basicBot.settings;
-		var basicBotRoom = basicBot.room;
-		var basicBotInfo = {
-			time: Date.now(),
-			version: basicBot.version
-		};
-		var data = {users:API.getUsers(),userinfo:API.getUser(),room:location.pathname,basicBotSettings:basicBotSettings,basicBotRoom:basicBotRoom,basicBotInfo:basicBotInfo};
-		return sock.msg(data);
-	};*/
-
 	var storeToStorage = function () {
 		localStorage.setItem("basicBotsettings", JSON.stringify(basicBot.settings));
 		localStorage.setItem("basicBotRoom", JSON.stringify(basicBot.room));
@@ -88,7 +46,6 @@
 			console.log("There is a chat text missing.");
 			return "[Error] Nenhuma mensagem de texto encontrada.";
 
-			// TODO: Get missing chat messages from source.
 		}
 		var lit = '%%';
 		for (var prop in obj) {
@@ -253,10 +210,10 @@
 			language: "portuguese",
 			chatLink: "https://moveit-brasil.github.io/bot/lang.json",
 			scriptLink: "https://moveit-brasil.github.io/bot/bot.js",
-			roomLock: false, // Requires an extension to re-load the script
-			startupCap: 1, // 1-200
-			startupVolume: 0, // 0-100
-			startupEmoji: false, // true or false
+			roomLock: false,
+			startupCap: 1,
+			startupVolume: 0,
+			startupEmoji: false,
 			autowoot: true,
 			autoskip: true,
 			smartSkip: true,
@@ -288,13 +245,6 @@
 			thorCooldown: 12,
 			skipPosition: 1,
 			skipReasons: [
-				["theme", "This song does not fit the room theme. "],
-				["op", "This song is on the OP list. "],
-				["history", "This song is in the history. "],
-				["mix", "You played a mix, which is against the rules. "],
-				["sound", "The song you played had bad sound quality or no sound. "],
-				["nsfw", "The song you contained was NSFW (image or sound). "],
-				["unavailable", "The song you played was not available for some users. "],
 				["som", "A música tocada tinha qualidade de som ruim ou não tinha som. "],
 				["tema", "Sua música não estava de acordo com o tema da sala. "],
 				["nudes", "A música continha conteudo impróprio NSFW :underage:"],
@@ -306,7 +256,7 @@
 			motdInterval: 5,
 			motd: "Temporary Message of the Day",
 			filterChat: false,
-			etaRestriction: false,
+			etaRestriction: true,
 			welcome: true,
 			opLink: "https://moveitbrasil.com.br/blacklist/",
 			rulesLink: "https://moveitbrasil.com.br/regras",
@@ -315,7 +265,7 @@
 			youtubeLink: null,
 			website: "https://moveitbrasil.com.br/",
 			intervalMessages: [],
-			messageInterval: 2,
+			messageInterval: 4,
 			songstats: false,
 			commandLiteral: "!",
 			blacklists: {
@@ -878,17 +828,17 @@
 			},
 			changeDJCycle: function () {
 				$.getJSON('/_/rooms/state', function(data) {
-					if (data.data[0].booth.shouldCycle) { // checks "" "shouldCycle": true "" if its true
-						API.moderateDJCycle(false); // Disables the DJ Cycle
-						clearTimeout(basicBot.room.cycleTimer); // Clear the cycleguard timer
-					} else { // If cycle is already disable; enable it
-						if (basicBot.settings.cycleGuard) { // Is cycle guard on?
-						API.moderateDJCycle(true); // Enables DJ cycle
-						basicBot.room.cycleTimer = setTimeout(function () {  // Start timer
-							API.moderateDJCycle(false); // Disable cycle
-						}, basicBot.settings.maximumCycletime * 60 * 1000); // The time
-						} else { // So cycleguard is not on?
-						 API.moderateDJCycle(true); // Enables DJ cycle
+					if (data.data[0].booth.shouldCycle) {
+						API.moderateDJCycle(false);
+						clearTimeout(basicBot.room.cycleTimer);
+					} else { //
+						if (basicBot.settings.cycleGuard) {
+						API.moderateDJCycle(true);
+						basicBot.room.cycleTimer = setTimeout(function () {
+							API.moderateDJCycle(false);
+						}, basicBot.settings.maximumCycletime * 60 * 1000);
+						} else {
+						 API.moderateDJCycle(true);
 						}
 					};
 				});
@@ -1383,7 +1333,7 @@
 					return true;
 				}
 			
-		var rlJoinChattroll = basicBot.chat.rouletteentra;
+		var rlJoinChattroll = basicBot.chat.rouletteentrar;
 				var rlLeaveChattroll = basicBot.chat.roulettesair;
 
 				var joinedroulettetroll = rlJoinChattroll.split('%%NAME%%');
@@ -1401,7 +1351,7 @@
 					return true;
 				}
 		   
-		var rlJoinChatpp = basicBot.chat.rouletteppentra;
+		var rlJoinChatpp = basicBot.chat.rouletteppentrar;
 				var rlLeaveChatpp = basicBot.chat.rouletteppsair;
 
 				var joinedroulettepp = rlJoinChatpp.split('%%NAME%%');
@@ -2826,8 +2776,8 @@
 				}
 			},
 			
-			entraCommand: {
-				command: 'entra',
+			entrarCommand: {
+				command: 'entrar',
 				rank: 'user',
 				type: 'exact',
 				functionality: function (chat, cmd) {
@@ -2836,7 +2786,7 @@
 					else {
 						if (basicBot.room.roulettetroll.rouletteStatus && basicBot.room.roulettetroll.participants.indexOf(chat.uid) < 0) {
 							basicBot.room.roulettetroll.participants.push(chat.uid);
-							API.sendChat(subChat(basicBot.chat.rouletteentra, {name: chat.un}));
+							API.sendChat(subChat(basicBot.chat.rouletteentrar, {name: chat.un}));
 					setTimeout(function () {
 							 var msg = chat.message;
 							 var dj = API.getDJ().username;
@@ -2878,7 +2828,7 @@
 					else {
 						if (basicBot.room.roulettepp.rouletteStatus && basicBot.room.roulettepp.participants.indexOf(chat.uid) < 0) {
 							basicBot.room.roulettepp.participants.push(chat.uid);
-							API.sendChat(subChat(basicBot.chat.rouletteppentra, {name: chat.un}));
+							API.sendChat(subChat(basicBot.chat.rouletteppentrar, {name: chat.un}));
 						}
 					}
 				}
