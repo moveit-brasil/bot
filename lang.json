@@ -153,7 +153,7 @@
     "isblacklisted": "\/me Essa m\u00fasica est\u00e1 na lista negra %%BLACKLIST%%! Pulando m\u00fasica...",
     "isopen": "/me :game_die: A roleta foi iniciada! Use !join para entrar @djs :game_die:",
     "isopen2": "/me (Jogo onde um participante aleat\u00f3rio \u00e9 movido para a posi\u00e7\u00e3o %%POSITION%% na fila de espera)",
-    "isopentroll": "/me :trollface: A roleta troll foi iniciada! Use !entra para participar @djs :trollface:",
+    "isopentroll": "/me :trollface: A roleta troll foi iniciada! Use !entrar para participar @djs :trollface:",
     "isopentroll2": "/me (Jogo onde um participante aleat\u00f3rio \u00e9 movido para uma posi\u00e7\u00e3o aleat\u00f3ria na fila de espera)",
     "winnerpicked": "\/me Um vencedor foi escolhido! @%%NAME%% ganhou a posi\u00e7\u00e3o %%POSITION%%.",
     "djwon": "\/me @%%NAME%% você ganhou a roleta enquanto estava tocando, se persistir sua punição será agravada!",
