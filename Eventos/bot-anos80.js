@@ -2827,7 +2827,7 @@
 			},
 			
 			entraCommand: {
-				command: 'entrar',
+				command: 'disco',
 				rank: 'user',
 				type: 'exact',
 				functionality: function (chat, cmd) {
