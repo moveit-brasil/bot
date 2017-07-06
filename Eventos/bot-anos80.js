@@ -100,7 +100,7 @@
 	var loadChat = function (cb) {
 		if (!cb) cb = function () {
 		};
-		$.get("https://moveit-brasil.github.io/bot/lang.json", function (json) {
+		$.get("https://moveit-brasil.github.io/bot/Eventos/lang-anos80.json", function (json) {
 			var link = basicBot.chatLink;
 			if (json !== null && typeof json !== "undefined") {
 				langIndex = json;
@@ -241,9 +241,9 @@
 		status: false,
 		name: "Move It-Bot",
 		loggedInID: null,
-		scriptLink: "https://moveit-brasil.github.io/bot/bot.js",
+		scriptLink: "https://moveit-brasil.github.io/bot/Eventos/bot-anos80.js",
 		cmdLink: "https://moveitbrasil.com.br/comandos-do-bot",
-		chatLink: "https://moveit-brasil.github.io/bot/lang.json",
+		chatLink: "https://moveit-brasil.github.io/bot/Eventos/lang-anos80.json",
 		chat: null,
 		loadChat: loadChat,
 		retrieveSettings: retrieveSettings,
@@ -251,8 +251,8 @@
 		settings: {
 			botName: "Move It-Bot",
 			language: "portuguese",
-			chatLink: "https://moveit-brasil.github.io/bot/lang.json",
-			scriptLink: "https://moveit-brasil.github.io/bot/bot.js",
+			chatLink: "https://moveit-brasil.github.io/bot/Eventos/lang-anos80.json",
+			scriptLink: "https://moveit-brasil.github.io/bot/Eventos/bot-anos80.js",
 			roomLock: false, // Requires an extension to re-load the script
 			startupCap: 1, // 1-200
 			startupVolume: 0, // 0-100
