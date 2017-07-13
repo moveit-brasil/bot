@@ -3437,7 +3437,7 @@
 					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
 					else {
 					   var c, mensagens;
-					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
+					  mensagens = ["/me Tema: Somente músicas dos anos 70, 80 e 90 de todos os gêneros. Vídeos NSFW são proibidos :underage:",
 				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
 				"/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",								
 				"/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
