@@ -145,7 +145,7 @@
     "greyuser": "Apenas Seguran\u00e7as ou superiores podem usar o bot.",
     "bouncer": "O bot n\u00e3o pode mover pessoas na fila de espera quando usado por um bouncer.",
     "online": "\/me %%BOTNAME%% online!",
-    "welcome": "Bem vindo(a) %%NAME%% a nossa noite do Flash Back :microphone2:",
+    "welcome": "Bem vindo(a) %%NAME%% a nossa noite do Flash Back :microphone:",
     "welcomeback": "Bem-vindo(a) de volta %%NAME%% :two_hearts:",
     "songknown": "@%%NAME%%, essa m\u00fasica est\u00e1 no hist\u00f3rico.",
     "timelimit": "@%%NAME%%, sua m\u00fasica tem dura\u00e7\u00e3o maior que %%MAXLENGTH%% minutos. Voc\u00ea precisa ter permiss\u00e3o para tocar m\u00fasicas longas.",
