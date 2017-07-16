@@ -3438,11 +3438,12 @@
 					else {
 					   var c, mensagens;
 					  mensagens = ["/me Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
-				"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
-				"/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",								
-				"/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
-				"/me Cine Move It - http://i.imgur.com/IQ4FuXL.gif",			
-				"/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!"];
+					"/me http://i.imgur.com/Xd4v2nS.gif",
+					"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
+					"/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",								
+					"/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
+					"/me Cine Move It - http://i.imgur.com/IQ4FuXL.gif",			
+					"/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!"];
 					  c = Math.floor(Math.random() * mensagens.length);
 			  return API.sendChat(mensagens[c]);
 					 }
