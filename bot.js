@@ -310,7 +310,7 @@
 			welcome: true,
 			opLink: "https://moveitbrasil.com.br/blacklist/",
 			rulesLink: "https://moveitbrasil.com.br/regras",
-			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
+			themeLink: "Tema: Música Latina (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
 			youtubeLink: null,
 			website: "https://moveitbrasil.com.br/",
