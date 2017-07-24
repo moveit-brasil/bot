@@ -3439,6 +3439,7 @@
 					   var c, mensagens;
 					  mensagens = ["!tema",
 					"/me https://i.imgur.com/OjTt9LK.png",
+					"/me Veja como ter foto grande no seu chat https://moveitbrasil.com.br/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
 					"/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
 					"/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",								
 					"/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
