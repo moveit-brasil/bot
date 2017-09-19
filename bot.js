@@ -602,28 +602,25 @@
 				return votes;
 
 			},
-			getPermission: function (obj) { //1 requests
+			getPermission: function(obj) {
 				var u;
-				if (typeof obj === "object") u = obj;
+				if (typeof obj === 'object') u = obj;
 				else u = API.getUser(obj);
-				for (var i = 0; i < botCreatorIDs.length; i++) {
-					if (botCreatorIDs[i].indexOf(u.id) > -1) return 10;
-				}
-				if (u.gRole < 2) return u.role;
+				if (botCreatorIDs.indexOf(u.id) > -1) return 9999;
+
+				if (u.gRole == 0) return u.role;
 				else {
-					switch (u.gRole) {
-						case 2:
-							return 7;
-						case 3:
-							return 8;
-						case 4:
-							return 9;
-						case 5:
-							return 10;
-					}
+				    switch (u.gRole) {
+					case 3:
+					case 3000:
+					    return (1*(API.ROLE.HOST-API.ROLE.COHOST))+API.ROLE.HOST;
+					case 5:
+					case 5000:
+					    return (2*(API.ROLE.HOST-API.ROLE.COHOST))+API.ROLE.HOST;
+				    }
 				}
 				return 0;
-			},
+			    },
 			moveUser: function (id, pos, priority) {
 				var user = basicBot.userUtilities.lookupUser(id);
 				var wlist = API.getWaitList();
