@@ -4318,19 +4318,19 @@
 								var rank;
 								if (rawrank == "0"){
 									rank = "User";
-								} else if (rawrank == "1"){
+								} else if (rawrank == "1000"){
 									rank = "Resident DJ";
-								} else if (rawrank == "2"){
+								} else if (rawrank == "2000"){
 									rank = "Bouncer";
-								} else if (rawrank == "3"){
+								} else if (rawrank == "3000"){
 									rank = "Manager";
-								} else if (rawrank == "4"){
+								} else if (rawrank == "4000"){
 									rank = "Co-Host";
-								} else if (rawrank == "5"){
+								} else if (rawrank == "5000"){
 									rank = "Host";
-								} else if (rawrank == "7"){
+								} else if (rawrank == "7000"){
 									rank = "Brand Ambassador";
-								} else if (rawrank == "10"){
+								} else if (rawrank == "10000"){
 									rank = "Admin";
 								}
 								var slug = API.getUser(id).slug;
