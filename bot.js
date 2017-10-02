@@ -312,7 +312,7 @@
 			rulesLink: "https://moveitbrasil.com.br/regras",
 			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
 			fbLink: "https://www.fb.com/groups/MoveItBrasil",
-			youtubeLink: null,
+			youtubeLink: "https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ",
 			website: "https://moveitbrasil.com.br/",
 			intervalMessages: [],
 			messageInterval: 2,
