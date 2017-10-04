@@ -311,7 +311,7 @@
 			opLink: "https://moveitbrasil.com.br/blacklist/",
 			rulesLink: "https://moveitbrasil.com.br/regras",
 			themeLink: "Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:",
-			fbLink: "https://www.fb.com/groups/MoveItBrasil",
+			fbLink: "https://www.facebook.com/moveitbrasil/",
 			youtubeLink: "https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ",
 			website: "https://moveitbrasil.com.br/",
 			intervalMessages: [],
@@ -3679,7 +3679,7 @@
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                       else {						
-			API.sendChat('/me Discord: https://discord.me/move-it ? Facebook: https://www.fb.com/groups/MoveItBrasil ?');
+			API.sendChat('/me Youtube: https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ ? Discord: https://discord.me/move-it ? Facebook: https://www.fb.com/groups/MoveItBrasil ?');
                                          }
 			            }
                             },
