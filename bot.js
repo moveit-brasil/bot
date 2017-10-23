@@ -4611,7 +4611,7 @@
             },
 
             websiteCommand: {
-                command: 'website',
+                command: ['website','site']
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
