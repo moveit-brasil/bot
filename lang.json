@@ -307,7 +307,8 @@
     "website": "\/me Visite nosso site: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Inscreva-se no nosso canal: %%LINK%%",
     "songstatistics": "/me %%ARTIST%% :musical_note: %%TITLE%%: :woot: %%WOOTS%% | :grab:  %%GRABS%% | :meh: %%MEHS%%",
-    "thorNotClose": "\/me @%%NAME%% Não era essa peça :wrench: que eu queria, sem relaxamento hoje :no_good:",
+    "thorVip": "\/me @%%NAME%% Não era essa peça :wrench: que eu queria, sem relaxamento hoje :no_good:",
+    "thorNotClose": "\/me @%%NAME%% membro VIP tem 14% mais chances de ganhar o Jailson",
     "thorcd": "\/me @%%NAME%% voc\u00ea pode tentar provar do suco de laranja :tangerine: em %%TIME%% minutos.",
     "thorWorthy": "\/me @%%NAME%% voc\u00ea \u00e9 dlç o bastante para provar do suco de laranja :tangerine:, sente-se, relaxe e toca uma pra mim :lenny:",
     "thorNotWorthy": "\/me @%%NAME%% voc\u00ea n\u00e3o \u00e9 dlç o bastante para provar do suco de laranja :tangerine:, volta pro final da fila bundão. :information_desk_person:"
