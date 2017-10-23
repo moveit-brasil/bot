@@ -245,7 +245,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209];
+    var botCreatorIDs = [3851534, 4105209, 4080795];
 
     var basicBot = {
         version: '2.11.1',
@@ -4156,12 +4156,8 @@
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
                                 worthy = true;
-                            }4080795
-                            
-                            /*if (4080795.indexOf(id) > -1) {
-                                worthy = true;
-                            }*/
-
+                            }
+				
                             for (var i = 0; i < djlist.length; i++) {
                                 if (djlist[i].id == id)
                                     inDjList = true;
