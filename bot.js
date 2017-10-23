@@ -4155,8 +4155,8 @@
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
-                                worthyAlg = Math.floor(Math.random() * 5) + 1,				
-				API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
+                                //worthyAlg = Math.floor(Math.random() * 5) + 1,				
+				//API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
                             }
 				
                             for (var i = 0; i < djlist.length; i++) {
