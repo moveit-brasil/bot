@@ -245,7 +245,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209, 4080795, 5039941, 631725];
+    var botCreatorIDs = [3851534, 4105209, 4080795, 5039941, 631725, 5765109, 5671563, 5695503];
 
     var basicBot = {
         version: '2.11.1',
@@ -316,7 +316,7 @@
             motdEnabled: false,
             motdInterval: 5,
             motd: 'Temporary Message of the Day',
-            filterChat: true,
+            filterChat: false,
             etaRestriction: false,
             welcome: true,
             opLink: 'https://moveitbrasil.com.br/blacklist/',
@@ -4155,7 +4155,7 @@
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
-                                worthyAlg = Math.floor(Math.random() * 5) + 1,
+                                worthyAlg = Math.floor(Math.random() * 8) + 1,
 				worthy = worthyAlg == 5 ? true : false;
 				//worthy = true;
 				//API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
