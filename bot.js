@@ -3111,8 +3111,9 @@
                  }
                 }
                },
-                ppCommand: {
-                command: 'pp',
+		
+		ppCommand: {
+                command: ['pp','doces'],
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -3126,8 +3127,9 @@
                  }
                 }
                },
+		
                sairppCommand: {
-                command: 'sair',
+                command: ['sair','travessuras'],
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
