@@ -3113,7 +3113,7 @@
                },
 		
 		ppCommand: {
-                command: ['pp','doces'],
+                command: 'doces',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -3129,7 +3129,7 @@
                },
 		
                sairppCommand: {
-                command: ['sair','travessuras'],
+                command: 'travessuras',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
