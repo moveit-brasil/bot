@@ -4153,14 +4153,14 @@
                                 indexArrUsedThor,
                                 thorCd = false,
                                 timeInMinutes = 0,
-                                worthyAlg = Math.floor(Math.random() * 15) + 1,
+                                worthyAlg = Math.floor(Math.random() * 11) + 1,
                                 worthy = worthyAlg == 5 ? true : false;
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
-                                worthyAlg = Math.floor(Math.random() * 8) + 1,
+                                worthyAlg = Math.floor(Math.random() * 5) + 1,
 				worthy = worthyAlg == 5 ? true : false;
-				worthy = true;
+				//worthy = true;
 				//API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
                             }
 				
