@@ -4209,9 +4209,8 @@
                                 if (API.getWaitListPosition(id) != 0)
                                 	basicBot.userUtilities.moveUser(id, 1, false);
                                		API.sendChat(subChat(basicBot.chat.thorWorthy, { name: from }));
-				if (botCreatorIDs.indexOf(id) > -1) { 
-					API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));  
-					}
+					if (botCreatorIDs.indexOf(id) > -1)
+						API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));  					
                             } else {
                                 if (API.getWaitListPosition(id) != djlist.length - 1)
                                     basicBot.userUtilities.moveUser(id, djlist.length, false);
