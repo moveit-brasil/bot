@@ -4160,7 +4160,7 @@
                             if (botCreatorIDs.indexOf(id) > -1) {
                                 worthyAlg = Math.floor(Math.random() * 8) + 1,
 				worthy = worthyAlg == 5 ? true : false;
-				//worthy = true;
+				worthy = true;
 				//API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
                             }
 				
