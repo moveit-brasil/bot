@@ -4159,7 +4159,7 @@
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
                                 worthyAlg = Math.floor(Math.random() * 5) + 1,
-				worthy = worthyAlg == 5 ? true : false;
+				worthy = worthyAlg == 5 ? true : false;				 
 				//worthy = true;
 				//API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
                             }
@@ -4209,10 +4209,9 @@
                                 if (API.getWaitListPosition(id) != 0)
                                 	basicBot.userUtilities.moveUser(id, 1, false);
                                		API.sendChat(subChat(basicBot.chat.thorWorthy, { name: from }));
-				if (botCreatorIDs.indexOf(id) > -1)  
-					console.log(true);	
-					API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));
-                           	
+				if (botCreatorIDs.indexOf(id) > -1) { 
+					API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));  
+					}
                             } else {
                                 if (API.getWaitListPosition(id) != djlist.length - 1)
                                     basicBot.userUtilities.moveUser(id, djlist.length, false);
