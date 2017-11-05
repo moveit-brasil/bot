@@ -246,6 +246,7 @@
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
     var botCreatorIDs = [3851534, 4105209];
+    var vipIDs = [6202831, 4925119, 5671563, 4656127, 631725, 5765109, 3685631, 5039941, 5695503, 4080795];
 
     var basicBot = {
         version: '2.11.1',
@@ -1038,12 +1039,12 @@
 
             }
 
-            if (botCreatorIDs.indexOf(user.id) > -1) {
+            if (vipIDs.indexOf(user.id) > -1) {
               console.log(true);
                 API.sendChat('Bem vindo(a) :sparkles: :sparkles: @'+user.username+' '+' :sparkles: :sparkles:');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
-              console.log(botCreatorIDs);
+              console.log(vipIDs);
                 welcomeback ?
                     setTimeout(function(user) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
@@ -4156,7 +4157,7 @@
                                 worthy = worthyAlg == 5 ? true : false;
 
                             // sly benzi 👀
-                            if (botCreatorIDs.indexOf(id) > -1) {
+                            if (vipIDs.indexOf(id) > -1) {
                                 worthyAlg = Math.floor(Math.random() * 5) + 1,
 				worthy = worthyAlg == 5 ? true : false;				 
 				//worthy = true;
@@ -4208,7 +4209,7 @@
                                 if (API.getWaitListPosition(id) != 0)
                                 	basicBot.userUtilities.moveUser(id, 1, false);
                                		API.sendChat(subChat(basicBot.chat.thorWorthy, { name: from }));
-				    	if (botCreatorIDs.indexOf(id) > -1)
+				    	if (vipIDs.indexOf(id) > -1)
 						setTimeout(function () {					     
 						API.sendChat(subChat(basicBot.chat.thorVip, {name: from}));  
 					   	 }, 1 * 1000);				
