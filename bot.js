@@ -245,7 +245,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209, 4080795, 5039941, 631725, 5765109, 5671563, 5695503];
+    var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
         version: '2.11.1',
