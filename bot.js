@@ -4797,5 +4797,5 @@
     };
 
     loadChat(basicBot.startup);
-	$.getScript("https://moveit-brasil.github.io/bot/entrada.js");
+	$.getScript("https://moveitbrasil.com.br/entrada-js/");
 }).call(this);
