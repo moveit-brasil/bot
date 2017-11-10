@@ -433,8 +433,12 @@
             basicBot.room.roulette.participants = [];
 
             var name = user.username;
-            API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
-
+	    if (name == null) {
+		    		API.sendChat(subChat(basicBot.chat.winnernull, {position: pos}));		    		
+	    			}
+		   else {
+			   API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
+			};            
             var dj = API.getDJ();
             if (dj && dj.id == user.id) {
              setTimeout(function () {
