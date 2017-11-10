@@ -524,7 +524,12 @@
             basicBot.room.roulettetroll.participants = [];
 
             var name = user.username;
-            API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: posx}));
+	    if (name == null) {
+		    		API.sendChat(subChat(basicBot.chat.winnernull, {position: posx}));		    		
+	    			}
+		   else {
+			   API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: posx}));
+			};           
 
             var dj = API.getDJ();
             if (dj && dj.id == user.id) {
