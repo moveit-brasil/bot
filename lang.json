@@ -156,6 +156,7 @@
     "isopentroll": "/me :trollface: A roleta troll foi iniciada! Use !entrar para participar @djs :trollface:",
     "isopentroll2": "/me (Jogo onde um participante aleat\u00f3rio \u00e9 movido para uma posi\u00e7\u00e3o aleat\u00f3ria na fila de espera)",
     "winnerpicked": "\/me Um vencedor foi escolhido! @%%NAME%% ganhou a posi\u00e7\u00e3o %%POSITION%%.",
+    "winnernull": "\/me Que pena, ninguem participou! A posi\u00e7\u00e3o sorteada foi: %%POSITION%%.",
     "djwon": "\/me @%%NAME%% você ganhou a roleta enquanto estava tocando, se persistir sua punição será agravada!",
     "ball": "\/me A pergunta de %%NAME%% foi: \"%%QUESTION%%\" e a resposta de %%BOTNAME%% \u00e9: \"%%RESPONSE%%\"",
     "roletamsg": "%%RESPONSE%%",
