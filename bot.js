@@ -489,61 +489,63 @@
             API.sendChat(subChat(basicBot.chat.winnerpickedpp, {name: name}));
            }
           },
-          roulettetroll: {
-           rouletteStatus: false,
-           participants: [],
-           countdown: null,
-           startRoulette: function () {
-            basicBot.room.roulettetroll.rouletteStatus = true;
-            basicBot.room.roulettetroll.countdown = setTimeout(function () {
-             basicBot.room.roulettetroll.endRoulette();
-            }, 60 * 1000);
-            setTimeout(function () {
-             API.sendChat(basicBot.chat.isopentroll);
-            }, 1 * 1000);
-            setTimeout(function () {
-             API.sendChat(basicBot.chat.isopentroll2);
-            }, 2 * 1000);
-           },
-           endRoulette: function () {
-            basicBot.room.roulettetroll.rouletteStatus = false;
-            var user = {};
-            var winner = 0;
-            var posx = Math.floor((Math.random() * API.getWaitList().length) + 1);
+roulettetroll: {
+    rouletteStatus: false,
+    participants: [],
+    countdown: null,
+    
+    startRoulette: function () {
+        basicBot.room.roulettetroll.rouletteStatus = true;
+        basicBot.room.roulettetroll.countdown = setTimeout(function () {
+            basicBot.room.roulettetroll.endRoulette();
+        }, 60 * 1000);
+        setTimeout(function () {
+            API.sendChat(basicBot.chat.isopentroll);
+        }, 1 * 1000);
+        setTimeout(function () {
+            API.sendChat(basicBot.chat.isopentroll2);
+        }, 2 * 1000);
+    },
+    
+    endRoulette: function () {
+        basicBot.room.roulettetroll.rouletteStatus = false;
+        var user = {};
+        var winner = 0;
+        var posx = Math.floor((Math.random() * API.getWaitList().length) + 1);
+        
+        while (!user.username && basicBot.room.roulettetroll.participants.length > 0) {
+            var ind = Math.floor(Math.random() * basicBot.room.roulettetroll.participants.length);
+            winner = basicBot.room.roulettetroll.participants[ind];
+            user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
 
-            while (!user.username && basicBot.room.roulettetroll.participants.length > 0) {
-             var ind = Math.floor(Math.random() * basicBot.room.roulettetroll.participants.length);
-             winner = basicBot.room.roulettetroll.participants[ind];
-
-             user = basicBot.userUtilities.lookupUser(winner) || API.getUser(winner);
-
-             if (!user.username) {
-              basicBot.room.roulettetroll.participants.splice(ind, 1);
-             }
+            if (!user.username) {
+                basicBot.room.roulettetroll.participants.splice(ind, 1);
             }
-            basicBot.room.roulettetroll.participants = [];
+        }
+        
+        basicBot.room.roulettetroll.participants = [];
 
-            var name = user.username;
+        var name = user.username;
 	    if (name == null) {
-		    		API.sendChat(subChat(basicBot.chat.winnernull, {position: posx}));		    		
-	    			}
-		   else {
-			   API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: posx}));
-			};           
+		  API.sendChat(subChat(basicBot.chat.winnernull, {position: posx}));		    		
+	    }
+		else {
+		  API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: posx}));
+		};           
 
-            var dj = API.getDJ();
-            if (dj && dj.id == user.id) {
-             setTimeout(function () {
-             API.sendChat(subChat(basicBot.chat.djwon, {name: name}));
-                }, 2 * 1000);
-             API.moderateForceSkip();
-            } else {
-             setTimeout(function (winner, posx) {
-              basicBot.userUtilities.moveUser(winner, posx, false);
-             }, 1 * 1000, winner, posx);
-            }
-           }		
-          },
+        var dj = API.getDJ();
+        if (dj && dj.id == user.id) {
+            setTimeout(function () {
+                API.sendChat(subChat(basicBot.chat.djwon, {name: name}));
+            }, 2 * 1000);
+            API.moderateForceSkip();
+        } else {
+            setTimeout(function (winner, posx) {
+                basicBot.userUtilities.moveUser(winner, posx, false);
+            }, 1 * 1000, winner, posx);
+        }
+    }		
+},
           usersUsedThor: []
          },
         User: function(id, name) {
@@ -2908,23 +2910,21 @@
                 }
             },
 
-            joinCommand: {
-                command: 'join',
-                rank: 'user',
-                type: 'exact',
-                functionality: function(chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else {
-                        if (basicBot.room.roulette.rouletteStatus && basicBot.room.roulette.participants.indexOf(chat.uid) < 0) {
-                            basicBot.room.roulette.participants.push(chat.uid);
-                            API.sendChat(subChat(basicBot.chat.roulettejoin, {
-                                name: chat.un
-                            }));
-                        }
-                    }
-                }
-            },
+joinCommand: {
+    command: 'join',
+    rank: 'user',
+    type: 'exact',
+    functionality: function(chat, cmd) {
+        if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+        if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+        else {
+            if (basicBot.room.roulette.rouletteStatus && basicBot.room.roulette.participants.indexOf(chat.uid) < 0) {
+                basicBot.room.roulette.participants.push(chat.uid);
+                API.sendChat(subChat(basicBot.chat.roulettejoin, {name: chat.un}));
+            }
+        }
+    }
+},
 
             jointimeCommand: {
                 command: 'jointime',
@@ -3079,31 +3079,32 @@
                 }
             },
          
-            entraCommand: {
-                command: 'entrar',
-                rank: 'user',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                 if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                 else {
-                  if (basicBot.room.roulettetroll.rouletteStatus && basicBot.room.roulettetroll.participants.indexOf(chat.uid) < 0) {
-                   basicBot.room.roulettetroll.participants.push(chat.uid);
-                   API.sendChat(subChat(basicBot.chat.rouletteentra, {name: chat.un}));
-                 setTimeout(function () {
-                    var msg = chat.message;
-                    var dj = API.getDJ().username;
-                    var name;
-                     if (msg.length > cmd.length) {
-                   if (perm < 2) return void (0);
-                   name = msg.substring(cmd.length + 2);
-                    } else name = chat.un;
-                     if (name == dj) return API.sendChat(subChat(basicBot.chat.roletadj, {name: name}));
-                 }, 2 * 1000);
-                  }
-                 }
-                }
-               },
+entraCommand: {
+    command: 'entrar',
+    rank: 'user',
+    type: 'exact',
+    functionality: function (chat, cmd) {
+        if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+        if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+        else {
+            if (basicBot.room.roulettetroll.rouletteStatus && basicBot.room.roulettetroll.participants.indexOf(chat.uid) < 0) {
+                basicBot.room.roulettetroll.participants.push(chat.uid);
+                API.sendChat(subChat(basicBot.chat.rouletteentra, {name: chat.un}));
+                //setTimeout(function () {
+                //    var msg = chat.message;
+                //    var dj = API.getDJ().username;
+                //    var name;
+                //    if (msg.length > cmd.length) {
+                //        if (perm < 2) return void (0);
+                //        name = msg.substring(cmd.length + 2);
+                //    } 
+                //    else name = chat.un;
+                //    if (name == dj) return API.sendChat(subChat(basicBot.chat.roletadj, {name: name}));
+                //}, 2 * 1000);
+            }
+        }
+    }
+},
 
                sairCommand: {
                 command: 'sair',
