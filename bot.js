@@ -295,7 +295,7 @@
             autoroulette: true,
             roulettepos: 2,
             commandCooldown: 30,
-            usercommandsEnabled: true,
+            usercommandsEnabled: false,
             thorCommand: true,
             thorCooldown: 12,
             skipPosition: 1,
