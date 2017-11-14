@@ -3714,28 +3714,28 @@ entraCommand: {
                  }
                 },
 
-                msgCommand: {
-                 command: 'mensagens',
-                 rank: 'manager',
-                 type: 'startsWith',
-                 functionality: function (chat, cmd) {
-                  if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                  if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                  else {
-                     var c, mensagens;
-             mensagens = [
-              "!tema",	      
-              "/me Veja como ter foto grande no seu chat https://moveitbrasil.com.br/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
-              "/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
-              "/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc http://i.imgur.com/X5MGCGi.png ",								
-              "/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
-              "/me Inscreva-se em nosso canal do YouTube - https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ",			
-              "/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!"];
-                    c = Math.floor(Math.random() * mensagens.length);
-                  return API.sendChat(mensagens[c]);
-                   }
-                 }
-                },
+msgCommand: {
+    command: 'mensagens',
+    rank: 'manager',
+    type: 'startsWith',
+    functionality: function (chat, cmd) {
+        if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+        if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+        else {
+            var c, mensagens;
+            mensagens = [
+                "!tema",	      
+                "/me Veja como ter foto grande no seu chat https://moveitbrasil.com.br/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
+                "/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
+                "/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc https://i.imgur.com/EuexgmL.jpg ",								
+                "/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
+                "/me Inscreva-se em nosso canal do YouTube - https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ",			
+                "/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!"];
+                c = Math.floor(Math.random() * mensagens.length);
+                return API.sendChat(mensagens[c]);
+        }
+    }
+},
 
                 rouletteCommand: {
                  command: ['roletatroll'],
