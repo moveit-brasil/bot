@@ -630,7 +630,7 @@ roulettetroll: {
                 else u = API.getUser(obj);
                 if (botCreatorIDs.indexOf(u.id) > -1) return 9999;
 
-                if (u.gRole == 0) return u.role;
+                if (!u.gRole) return u.role;
                 else {
                     switch (u.gRole) {
                         case 3:
