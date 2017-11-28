@@ -2174,6 +2174,9 @@ roulettetroll: {
                         var permUser = basicBot.userUtilities.getPermission(user.id);
                         if (permUser >= permFrom) return void(0);
                         API.moderateBanUser(user.id, 1, API.BAN.DAY);
+			setTimeout(function () {
+				API.sendChat('https://i.imgur.com/O3DHIA5.gif');
+			}, 1 * 1000);
                     }
                 }
             },
