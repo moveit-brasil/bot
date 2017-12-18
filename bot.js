@@ -4811,5 +4811,5 @@ msgCommand: {
     };
 
     loadChat(basicBot.startup);
-	$.getScript("https://moveitbrasil.com.br/entrada-js/");
+	$.getScript("https://moveit.cacserver.ga/entrada-js/");
 }).call(this);
