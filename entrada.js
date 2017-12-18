@@ -43,7 +43,7 @@ API.on(API.USER_JOIN, user => {
     API.sendChat(`/me @${user.username} `);
 			
     if (user.id == "3742812")
-    API.sendChat(`/me @${user.username} Welcome Lord 🔺`);
+    API.sendChat(`/me @${user.username} Welcome Lord `);
 			
     if (user.id == "")
     API.sendChat(`/me @${user.username} `);
@@ -53,4 +53,4 @@ API.on(API.USER_JOIN, user => {
 			
     if (user.id == "5671563")
     API.sendChat(`/me @${user.username} :wave: Se abertinha já é abertinha, imagine abertinha??`);
-		});
+});
