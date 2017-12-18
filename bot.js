@@ -331,7 +331,7 @@
             songstats: false,
             commandLiteral: '!',
             blacklists: {
-                NSFW: '#',
+                NSFW: 'https://rawgit.com/moveit-brasil/bot/gh-pages/op.json',
                 OP: 'https://moveitbrasil.com.br/blacklist-op-json/',
                 BANNED: '#'
             }
