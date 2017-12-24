@@ -254,7 +254,7 @@
         name: 'Move It-Bot',
         loggedInID: null,
         scriptLink: 'https://moveit-brasil.github.io/bot/bot.js',
-        cmdLink: 'https://moveitbrasil.com.br/comandos-do-bot',
+        cmdLink: 'https://moveit.cacserver.ga/comandos-do-bot',
         chatLink: 'https://moveit-brasil.github.io/bot/lang.json',
         chat: null,
         loadChat: loadChat,
@@ -320,12 +320,12 @@
             filterChat: false,
             etaRestriction: false,
             welcome: true,
-            opLink: 'https://moveitbrasil.com.br/blacklist',
-            rulesLink: 'https://moveitbrasil.com.br/regras',
+            opLink: 'https://moveit.cacserver.ga/blacklist',
+            rulesLink: 'https://moveit.cacserver.ga/regras',
             themeLink: 'Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:',
             fbLink: 'https://www.facebook.com/moveitbrasil/',
             youtubeLink: 'https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ',
-            website: 'https://moveitbrasil.com.br/',
+            website: 'https://moveit.cacserver.ga',
             intervalMessages: [],
             messageInterval: 2,
             songstats: false,
@@ -1399,7 +1399,7 @@ roulettetroll: {
                  return true;
                 }
                 if (msg.indexOf('!loja') > -1) {
-                 API.sendChat('Compre itens VIP Move It por boleto, acesse - https://moveitbrasil.com.br/loja/');									
+                 API.sendChat('Compre itens VIP Move It por boleto, acesse - https://moveit.cacserver.ga/loja/');									
                  return true;
                 }
                 if (msg.indexOf('!clearchat') > -1) {
@@ -2604,7 +2604,7 @@ roulettetroll: {
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var link = 'http://www.emoji-cheat-sheet.com/';
-					                  	var link2 = 'https://moveitbrasil.com.br/emotes.php';
+					                  	var link2 = 'https://moveit.cacserver.ga/emotes.php';
                         API.sendChat(subChat(basicBot.chat.emojilist, {
                             link: link
                         }));
@@ -3728,12 +3728,11 @@ msgCommand: {
             var c, mensagens;
             mensagens = [
                 "!tema",
-		"/me Tenha benefícios exclusivos com o VIP Move It, acesse https://moveitbrasil.com.br/vip-move-it-conheca-os-beneficios/",
-                "/me Veja como ter foto grande no seu chat https://moveitbrasil.com.br/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
+		"/me Tenha benefícios exclusivos com o VIP Move It, acesse https://moveit.cacserver.ga/vip-move-it-conheca-os-beneficios/",
+                "/me Veja como ter foto grande no seu chat https://moveit.cacserver.ga/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
                 "/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
                 "/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc https://i.imgur.com/EuexgmL.jpg ",								
-                "/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",
-                "/me Inscreva-se em nosso canal do YouTube - https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ",			
+                "/me Confira nossas regras em - https://moveit.cacserver.ga/regras/",                		
                 "/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!"];
                 c = Math.floor(Math.random() * mensagens.length);
                 return API.sendChat(mensagens[c]);
@@ -3921,7 +3920,7 @@ msgCommand: {
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                        else {						
-	                           		API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://moveitbrasil.com.br/foto-no-chat-do-plug/');
+	                           		API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://moveit.cacserver.ga/foto-no-chat-do-plug/');
                                          }
 			                                }
                             },
