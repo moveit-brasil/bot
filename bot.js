@@ -253,7 +253,7 @@
         status: false,
         name: 'Move It-Bot',
         loggedInID: null,
-        scriptLink: 'https://cdn.plugbots.tk/mib/bot.js',
+        scriptLink: 'https://rawgit.com/moveit-brasil/bot/gh-pages/bot.js',
         cmdLink: 'https://moveitbrasil.com.br/comandos-do-bot',
         chatLink: 'https://moveit-brasil.github.io/bot/lang.json',
         chat: null,
@@ -264,7 +264,7 @@
             botName: 'Move It-Bot',
             language: 'portuguese',
             chatLink: 'https://moveit-brasil.github.io/bot/lang.json',
-            scriptLink: 'https://cdn.plugbots.tk/mib/bot.js',
+            scriptLink: 'https://rawgit.com/moveit-brasil/bot/gh-pages/bot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -332,7 +332,7 @@
             commandLiteral: '!',
             blacklists: {
                 NSFW: '#',
-                OP: 'https://cdn.plugbots.tk/mib/op.php',
+                OP: 'https://moveitbrasil.com.br/blacklist-op-json/',
                 BANNED: '#'
             }
         },
@@ -4810,5 +4810,5 @@ msgCommand: {
     };
 
     loadChat(basicBot.startup);
-	$.getScript("https://cdn.plugbots.tk/mib/entrada.js");
+	$.getScript("https://moveitbrasil.com.br/entrada-js/");
 }).call(this);
