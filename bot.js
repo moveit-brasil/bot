@@ -246,15 +246,15 @@
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
     var botCreatorIDs = [3851534, 4105209];
-    var vipIDs = [3742812, 20472203, 4925119, 5631973, 4103684, 5671563, 3851265, 4656127, 631725, 27067405, 4080795];
+    var vipIDs = [3180606, 21759495, 3742812, 20472203, 4103684, 5671563, 631725, 5039941, 27067405, 4080795];
 
     var basicBot = {
         version: '2.11.1',
         status: false,
         name: 'Move It-Bot',
         loggedInID: null,
-        scriptLink: 'https://moveit-brasil.github.io/bot/bot.js',
-        cmdLink: 'https://moveit.cacserver.ga/comandos-do-bot',
+        scriptLink: 'https://cdn.plugbots.tk/mib/bot.js',
+        cmdLink: 'https://moveitbrasil.com.br/comandos-do-bot',
         chatLink: 'https://moveit-brasil.github.io/bot/lang.json',
         chat: null,
         loadChat: loadChat,
@@ -264,7 +264,7 @@
             botName: 'Move It-Bot',
             language: 'portuguese',
             chatLink: 'https://moveit-brasil.github.io/bot/lang.json',
-            scriptLink: 'https://moveit-brasil.github.io/bot/bot.js',
+            scriptLink: 'https://cdn.plugbots.tk/mib/bot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -320,19 +320,19 @@
             filterChat: false,
             etaRestriction: false,
             welcome: true,
-            opLink: 'https://moveit.cacserver.ga/blacklist',
-            rulesLink: 'https://moveit.cacserver.ga/regras',
+            opLink: 'https://moveitbrasil.com.br/blacklist',
+            rulesLink: 'https://moveitbrasil.com.br/regras',
             themeLink: 'Tema: Livre (todos os gêneros permitido) Zoeira somente das 22h às 07h, vídeos NSFW são proibidos :underage:',
             fbLink: 'https://www.facebook.com/moveitbrasil/',
             youtubeLink: 'https://www.youtube.com/channel/UCvIP6NPw1sS_U2ye_8-LsQQ',
-            website: 'https://moveit.cacserver.ga',
+            website: 'https://moveitbrasil.com.br',
             intervalMessages: [],
             messageInterval: 2,
             songstats: false,
             commandLiteral: '!',
             blacklists: {
                 NSFW: '#',
-                OP: 'https://moveit.cacserver.ga/blacklist-op-json/',
+                OP: 'https://cdn.plugbots.tk/mib/op.php',
                 BANNED: '#'
             }
         },
@@ -1399,7 +1399,7 @@ roulettetroll: {
                  return true;
                 }
                 if (msg.indexOf('!loja') > -1) {
-                 API.sendChat('Compre itens VIP Move It por boleto, acesse - https://moveit.cacserver.ga/loja/');									
+                 API.sendChat('Compre itens VIP Move It por boleto, acesse - https://moveitbrasil.com.br/loja/');									
                  return true;
                 }
                 if (msg.indexOf('!clearchat') > -1) {
@@ -2604,7 +2604,7 @@ roulettetroll: {
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var link = 'http://www.emoji-cheat-sheet.com/';
-					                  	var link2 = 'https://moveit.cacserver.ga/emotes.php';
+					                  	var link2 = 'https://moveitbrasil.com.br/emotes.php';
                         API.sendChat(subChat(basicBot.chat.emojilist, {
                             link: link
                         }));
@@ -3728,11 +3728,11 @@ msgCommand: {
             var c, mensagens;
             mensagens = [
                 "!tema",
-		"/me Tenha benefícios exclusivos com o VIP Move It, acesse https://moveit.cacserver.ga/vip-move-it-conheca-os-beneficios/",
-                "/me Veja como ter foto grande no seu chat https://moveit.cacserver.ga/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
+		"/me Tenha benefícios exclusivos com o VIP Move It, acesse https://moveitbrasil.com.br/vip-move-it-conheca-os-beneficios/",
+                "/me Veja como ter foto grande no seu chat https://moveitbrasil.com.br/chat-e-foto-grande/ http://i.imgur.com/432N1pT.jpg",
                 "/me Roleta a cada 30 minutos, fique atento as roletas, uma move para o 2º lugar e a outra para uma posição aleatória!",				
                 "/me Digite !autowoot e instale o RCS para poder ver a customização da sala, foto no chat, etc https://i.imgur.com/EuexgmL.jpg ",								
-                "/me Confira nossas regras em - https://moveit.cacserver.ga/regras/",                		
+                "/me Confira nossas regras em - https://moveitbrasil.com.br/regras/",                		
                 "/me Quer ter uma foto no chat? http://i.imgur.com/5Gyrwby.jpg Digite !foto cadastre-se em nosso site e siga as instruções!"];
                 c = Math.floor(Math.random() * mensagens.length);
                 return API.sendChat(mensagens[c]);
@@ -3920,7 +3920,7 @@ msgCommand: {
                                       if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                       if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                                        else {						
-	                           		API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://moveit.cacserver.ga/foto-no-chat-do-plug/');
+	                           		API.sendChat('/me Veja nesse link como ter sua foto no chat do Plug: https://moveitbrasil.com.br/foto-no-chat-do-plug/');
                                          }
 			                                }
                             },
@@ -4810,5 +4810,5 @@ msgCommand: {
     };
 
     loadChat(basicBot.startup);
-	$.getScript("https://moveit.cacserver.ga/entrada-js/");
+	$.getScript("https://cdn.plugbots.tk/mib/entrada.js");
 }).call(this);
